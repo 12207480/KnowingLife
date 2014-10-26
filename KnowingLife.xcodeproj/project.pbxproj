@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03C533019FCCDDB00647439 /* WBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C532B19FCCDDB00647439 /* WBTabBar.m */; };
+		B03C533119FCCDDB00647439 /* WBTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C532D19FCCDDB00647439 /* WBTabBarButton.m */; };
+		B03C533219FCCDDB00647439 /* WBBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C532F19FCCDDB00647439 /* WBBadgeButton.m */; };
+		B03C533519FCCE2700647439 /* KLTableBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03C533419FCCE2700647439 /* KLTableBarController.m */; };
 		B0A76A9519FCC5E000850748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76A9419FCC5E000850748 /* main.m */; };
 		B0A76A9819FCC5E000850748 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76A9719FCC5E000850748 /* AppDelegate.m */; };
 		B0A76A9B19FCC5E000850748 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76A9A19FCC5E000850748 /* ViewController.m */; };
@@ -14,6 +18,10 @@
 		B0A76AA019FCC5E000850748 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A76A9F19FCC5E000850748 /* Images.xcassets */; };
 		B0A76AA319FCC5E000850748 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A76AA119FCC5E000850748 /* LaunchScreen.xib */; };
 		B0A76AAF19FCC5E000850748 /* KnowingLifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76AAE19FCC5E000850748 /* KnowingLifeTests.m */; };
+		B0A76ABF19FCC7E100850748 /* KLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76ABE19FCC7E100850748 /* KLNavigationController.m */; };
+		B0A76AC919FCCA0500850748 /* UIImage+WB.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76AC419FCCA0500850748 /* UIImage+WB.m */; };
+		B0A76ACA19FCCA0500850748 /* UIBarButtonItem+WB.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76AC619FCCA0500850748 /* UIBarButtonItem+WB.m */; };
+		B0A76ACB19FCCA0500850748 /* NSDate+WB.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76AC819FCCA0500850748 /* NSDate+WB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B03C532A19FCCDDB00647439 /* WBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTabBar.h; sourceTree = "<group>"; };
+		B03C532B19FCCDDB00647439 /* WBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTabBar.m; sourceTree = "<group>"; };
+		B03C532C19FCCDDB00647439 /* WBTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTabBarButton.h; sourceTree = "<group>"; };
+		B03C532D19FCCDDB00647439 /* WBTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTabBarButton.m; sourceTree = "<group>"; };
+		B03C532E19FCCDDB00647439 /* WBBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBBadgeButton.h; sourceTree = "<group>"; };
+		B03C532F19FCCDDB00647439 /* WBBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBBadgeButton.m; sourceTree = "<group>"; };
+		B03C533319FCCE2700647439 /* KLTableBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTableBarController.h; sourceTree = "<group>"; };
+		B03C533419FCCE2700647439 /* KLTableBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTableBarController.m; sourceTree = "<group>"; };
 		B0A76A8F19FCC5E000850748 /* KnowingLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowingLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A76A9319FCC5E000850748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A76A9419FCC5E000850748 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +56,16 @@
 		B0A76AA819FCC5E000850748 /* KnowingLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowingLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A76AAD19FCC5E000850748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A76AAE19FCC5E000850748 /* KnowingLifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowingLifeTests.m; sourceTree = "<group>"; };
+		B0A76ABD19FCC7E100850748 /* KLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLNavigationController.h; sourceTree = "<group>"; };
+		B0A76ABE19FCC7E100850748 /* KLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLNavigationController.m; sourceTree = "<group>"; };
+		B0A76AC119FCC94E00850748 /* KLComment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KLComment.h; path = ../KLComment.h; sourceTree = "<group>"; };
+		B0A76AC319FCCA0500850748 /* UIImage+WB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WB.h"; sourceTree = "<group>"; };
+		B0A76AC419FCCA0500850748 /* UIImage+WB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WB.m"; sourceTree = "<group>"; };
+		B0A76AC519FCCA0500850748 /* UIBarButtonItem+WB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+WB.h"; sourceTree = "<group>"; };
+		B0A76AC619FCCA0500850748 /* UIBarButtonItem+WB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+WB.m"; sourceTree = "<group>"; };
+		B0A76AC719FCCA0500850748 /* NSDate+WB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WB.h"; sourceTree = "<group>"; };
+		B0A76AC819FCCA0500850748 /* NSDate+WB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WB.m"; sourceTree = "<group>"; };
+		B0A76ACE19FCCC3C00850748 /* KnowingLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KnowingLife-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +107,7 @@
 		B0A76A9119FCC5E000850748 /* KnowingLife */ = {
 			isa = PBXGroup;
 			children = (
+				B0A76AB819FCC79300850748 /* Class */,
 				B0A76A9619FCC5E000850748 /* AppDelegate.h */,
 				B0A76A9719FCC5E000850748 /* AppDelegate.m */,
 				B0A76A9919FCC5E000850748 /* ViewController.h */,
@@ -96,6 +123,7 @@
 		B0A76A9219FCC5E000850748 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B0A76ACE19FCCC3C00850748 /* KnowingLife-Prefix.pch */,
 				B0A76A9319FCC5E000850748 /* Info.plist */,
 				B0A76A9419FCC5E000850748 /* main.m */,
 			);
@@ -117,6 +145,70 @@
 				B0A76AAD19FCC5E000850748 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0A76AB819FCC79300850748 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				B0A76ABA19FCC79300850748 /* Main */,
+				B0A76AB919FCC79300850748 /* Extention */,
+				B0A76AC119FCC94E00850748 /* KLComment.h */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		B0A76AB919FCC79300850748 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				B0A76AC219FCC9DB00850748 /* Category */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		B0A76ABA19FCC79300850748 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B0A76ABB19FCC79300850748 /* Controller */,
+				B0A76ABC19FCC79300850748 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B0A76ABB19FCC79300850748 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0A76ABD19FCC7E100850748 /* KLNavigationController.h */,
+				B0A76ABE19FCC7E100850748 /* KLNavigationController.m */,
+				B03C533319FCCE2700647439 /* KLTableBarController.h */,
+				B03C533419FCCE2700647439 /* KLTableBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B0A76ABC19FCC79300850748 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B03C532A19FCCDDB00647439 /* WBTabBar.h */,
+				B03C532B19FCCDDB00647439 /* WBTabBar.m */,
+				B03C532C19FCCDDB00647439 /* WBTabBarButton.h */,
+				B03C532D19FCCDDB00647439 /* WBTabBarButton.m */,
+				B03C532E19FCCDDB00647439 /* WBBadgeButton.h */,
+				B03C532F19FCCDDB00647439 /* WBBadgeButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0A76AC219FCC9DB00850748 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B0A76AC319FCCA0500850748 /* UIImage+WB.h */,
+				B0A76AC419FCCA0500850748 /* UIImage+WB.m */,
+				B0A76AC519FCCA0500850748 /* UIBarButtonItem+WB.h */,
+				B0A76AC619FCCA0500850748 /* UIBarButtonItem+WB.m */,
+				B0A76AC719FCCA0500850748 /* NSDate+WB.h */,
+				B0A76AC819FCCA0500850748 /* NSDate+WB.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A76ACB19FCCA0500850748 /* NSDate+WB.m in Sources */,
 				B0A76A9B19FCC5E000850748 /* ViewController.m in Sources */,
+				B03C533019FCCDDB00647439 /* WBTabBar.m in Sources */,
+				B0A76AC919FCCA0500850748 /* UIImage+WB.m in Sources */,
+				B03C533219FCCDDB00647439 /* WBBadgeButton.m in Sources */,
 				B0A76A9819FCC5E000850748 /* AppDelegate.m in Sources */,
+				B0A76ACA19FCCA0500850748 /* UIBarButtonItem+WB.m in Sources */,
+				B03C533519FCCE2700647439 /* KLTableBarController.m in Sources */,
+				B0A76ABF19FCC7E100850748 /* KLNavigationController.m in Sources */,
 				B0A76A9519FCC5E000850748 /* main.m in Sources */,
+				B03C533119FCCDDB00647439 /* WBTabBarButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +443,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KnowingLife/KnowingLife-Prefix.pch";
 				INFOPLIST_FILE = KnowingLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,7 +457,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KnowingLife/KnowingLife-Prefix.pch";
 				INFOPLIST_FILE = KnowingLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +520,7 @@
 				B0A76AB419FCC5E000850748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0A76AB519FCC5E000850748 /* Build configuration list for PBXNativeTarget "KnowingLifeTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +529,7 @@
 				B0A76AB719FCC5E000850748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
