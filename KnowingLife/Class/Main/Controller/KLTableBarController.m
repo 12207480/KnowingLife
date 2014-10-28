@@ -11,10 +11,12 @@
 #import "WBTabBar.h"
 #import "KLNavigationController.h"
 #import "ViewController.h"
+#import "LifeSearchController.h"
+#import "KLNewsViewController.h"
 
 @interface KLTableBarController ()<WBTabbarDekegate>
 @property (nonatomic, weak) WBTabBar *customTabBar;
-@property (nonatomic, weak) ViewController *home;
+@property (nonatomic, weak) LifeSearchController *life;
 @end
 
 @implementation KLTableBarController
@@ -62,20 +64,20 @@
 - (void)setupAllChildViewControls
 {
     // 首页控制器
-    ViewController *home = [[ViewController alloc]init];
+    LifeSearchController *life = [[LifeSearchController alloc]init];
     //home.tabBarItem.badgeValue = @"20";
-    [self addChildViewControl:home title:@"首页" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
-    self.home = home;
+    [self addChildViewControl:life title:@"生活" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
+    self.life = life;
     
     // 消息控制器
-    ViewController *msg = [[ViewController alloc]init];
+    KLNewsViewController *news = [[KLNewsViewController alloc]init];
     //msg.tabBarItem.badgeValue = @"30";
-    [self addChildViewControl:msg title:@"消息" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
+    [self addChildViewControl:news title:@"新闻" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
     
     // 广场控制器
     ViewController *discover = [[ViewController alloc]init];
     //discover.tabBarItem.badgeValue = @"60";
-    [self addChildViewControl:discover title:@"广场" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
+    [self addChildViewControl:discover title:@"团购" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
     
     // 我控制器
     ViewController *me = [[ViewController alloc]init];

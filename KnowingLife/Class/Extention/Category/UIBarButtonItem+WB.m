@@ -18,4 +18,13 @@
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc]initWithCustomView:button];
 }
+
++ (UIBarButtonItem *)itemWithIcon:(NSString *)icon target:(id)target action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setBackgroundImage:[UIImage imageWithName:icon] forState:UIControlStateNormal];
+    button.frame = (CGRect){CGPointZero,button.currentBackgroundImage.size};
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc]initWithCustomView:button];
+}
 @end
