@@ -95,11 +95,11 @@
         if (IDCarditem.value) {
             // 查询数据
             [weakSelf getIDCardData:IDCarditem.value];
+            [MBProgressHUD showMessage:@"查询中..."];
         }
         
         // item取消选择
         [item deselectRowAnimated:UITableViewRowAnimationAutomatic];
-        [MBProgressHUD showMessage:@"查询中..."];
     }];
     buttonItem.textAlignment = NSTextAlignmentCenter;
     [section addItem:buttonItem];
@@ -152,7 +152,12 @@
     }];
 }
 
-/*  
+- (void)dealloc
+{
+    KLLog(@"IDCardsSearchController dealloc");
+}
+
+/* 返回数据
  birthday = "1991-10-02";
  error = 0;
  region = "\U6e56\U5357\U7701 \U6e58\U6f6d\U5e02 \U6e58\U6f6d\U53bf";

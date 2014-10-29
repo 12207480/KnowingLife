@@ -22,4 +22,12 @@
 // collectionview背景颜色
 #define KLCollectionBkgCollor KLColor(231, 231, 231);
 
+// 自定义Log
+#ifdef DEBUG
+#define KLLog(...) NSLog(__VA_ARGS__)
+#else
+#define KLLog(...)
+#endif
+
+
 #endif
