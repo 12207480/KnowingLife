@@ -15,8 +15,11 @@
 #define ios7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
 // 获得RGB颜色
-#define WBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define KLColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 // 是否是4寸iPhone
 #define is4Inch ([UIScreen mainScreen].bounds.size.height == 568)
+
+// collectionview背景颜色
+#define KLCollectionBkgCollor KLColor(231, 231, 231);
 
 #endif

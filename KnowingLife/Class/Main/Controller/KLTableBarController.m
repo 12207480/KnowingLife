@@ -11,12 +11,15 @@
 #import "WBTabBar.h"
 #import "KLNavigationController.h"
 #import "ViewController.h"
-#import "LifeSearchController.h"
 #import "KLNewsViewController.h"
+#import "KLMoreViewController.h"
+#import "ProductCollectionController.h"
+#import "CSStickyHeaderFlowLayout.h"
 
 @interface KLTableBarController ()<WBTabbarDekegate>
 @property (nonatomic, weak) WBTabBar *customTabBar;
-@property (nonatomic, weak) LifeSearchController *life;
+@property (nonatomic, weak) ProductCollectionController *life;
+@property (nonatomic, weak) KLMoreViewController *more;
 @end
 
 @implementation KLTableBarController
@@ -56,15 +59,29 @@
 {
     self.selectedIndex = to;
     
-    if (to == 0) { // 点击首页
+    if (to == 3) { // 点击更多
         //[self.home refreshData];
+        // 传递数据
+        self.more.weatherInfo = self.life.weatherInfo;
     }
 }
 
 - (void)setupAllChildViewControls
 {
     // 首页控制器
-    LifeSearchController *life = [[LifeSearchController alloc]init];
+    // 创建布局
+    CSStickyHeaderFlowLayout *layout = [[CSStickyHeaderFlowLayout alloc]init];
+    // 设置cell尺寸
+    layout.itemSize = CGSizeMake(80, 80);
+    // 设置水平间距
+    layout.minimumInteritemSpacing = 0;
+    // 设置垂直间距
+    layout.minimumLineSpacing = 10;
+    layout.sectionInset = UIEdgeInsetsMake(10, 0, 0, 0);
+    layout.parallaxHeaderReferenceSize = CGSizeMake(self.view.frame.size.width, 170);
+    layout.headerReferenceSize = CGSizeMake(200, 50);
+    ProductCollectionController *life = [[ProductCollectionController alloc]initWithCollectionViewLayout:layout];
+    //ProductCollectionController *life = [[ProductCollectionController alloc]init];
     //home.tabBarItem.badgeValue = @"20";
     [self addChildViewControl:life title:@"生活" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
     self.life = life;
@@ -80,10 +97,10 @@
     [self addChildViewControl:discover title:@"团购" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
     
     // 我控制器
-    ViewController *me = [[ViewController alloc]init];
+    KLMoreViewController *more = [[KLMoreViewController alloc]init];
     //me.tabBarItem.badgeValue = @"80";
-    [self addChildViewControl:me title:@"更多" imageName:@"tabbar_more" selectedImageName:@"tabbar_more_selected"];
-    
+    [self addChildViewControl:more title:@"更多" imageName:@"tabbar_more" selectedImageName:@"tabbar_more_selected"];
+    self.more = more;
     
 }
 

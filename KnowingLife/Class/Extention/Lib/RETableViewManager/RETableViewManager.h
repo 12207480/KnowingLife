@@ -51,6 +51,8 @@
 #import "RESegmentedItem.h"
 #import "REInlineDatePickerItem.h"
 #import "REInlinePickerItem.h"
+#import "WBSubtitleItem.h"
+#import "WBSubtitleCell.h"
 
 @protocol RETableViewManagerDelegate;
 
