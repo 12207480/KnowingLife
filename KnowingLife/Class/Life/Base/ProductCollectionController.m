@@ -23,6 +23,7 @@
 #import "PhoneSearchController.h"
 #import "CurrencySearchController.h"
 #import "DreamAnalysisController.h"
+#import "IPSearchController.h"
 
 @interface ProductCollectionController ()<CitysViewdelegate>
 @property (nonatomic, strong) NSMutableArray *sections;
@@ -137,14 +138,19 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
 
 - (void)addSectionSearch
 {
+    // 添加section
     ProductSection *section = [ProductSection section];
     section.headerTitle = @"生活查询";
+    
+    // 添加items
     ProductItem *IDCardItem = [ProductItem itemWithTitle:@"身份证查询" icon:@"s3" destVcClass:[IDCardsSearchController class]];
     ProductItem *phoneItem = [ProductItem itemWithTitle:@"手机归属地" icon:@"a1" destVcClass:[PhoneSearchController class]];
     ProductItem *currencyItem = [ProductItem itemWithTitle:@"货币汇率" icon:@"a7" destVcClass:[CurrencySearchController class]];
     ProductItem *dreamItem = [ProductItem itemWithTitle:@"周公解梦" icon:@"a6" destVcClass:[DreamAnalysisController class]];
     
-    [section.items addObjectsFromArray:@[IDCardItem,phoneItem,currencyItem,dreamItem]];
+    ProductItem *IPItem = [ProductItem itemWithTitle:@"IP地址查询" icon:@"a5" destVcClass:[IPSearchController class]];
+    
+    [section.items addObjectsFromArray:@[IDCardItem,phoneItem,currencyItem,dreamItem,IPItem]];
     [self.sections addObject:section];
 }
 

@@ -60,6 +60,7 @@
 		B080E5991A0261EB00C819A4 /* DreamAnalysisController.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E5981A0261EB00C819A4 /* DreamAnalysisController.m */; };
 		B080E59C1A026B3400C819A4 /* MultilineTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E59B1A026B3400C819A4 /* MultilineTextCell.m */; };
 		B080E59F1A026B5000C819A4 /* MultilineTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E59E1A026B5000C819A4 /* MultilineTextItem.m */; };
+		B080E5A21A0280FC00C819A4 /* IPSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E5A11A0280FC00C819A4 /* IPSearchController.m */; };
 		B0845B4E1A01F52F00776F30 /* PhoneSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0845B4D1A01F52F00776F30 /* PhoneSearchController.m */; };
 		B0845B521A020EDB00776F30 /* Currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0845B511A020EDB00776F30 /* Currency.plist */; };
 		B0845B551A02131F00776F30 /* CurrencySearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0845B541A02131F00776F30 /* CurrencySearchController.m */; };
@@ -263,6 +264,8 @@
 		B080E59B1A026B3400C819A4 /* MultilineTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultilineTextCell.m; sourceTree = "<group>"; };
 		B080E59D1A026B5000C819A4 /* MultilineTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultilineTextItem.h; sourceTree = "<group>"; };
 		B080E59E1A026B5000C819A4 /* MultilineTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultilineTextItem.m; sourceTree = "<group>"; };
+		B080E5A01A0280FC00C819A4 /* IPSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSearchController.h; sourceTree = "<group>"; };
+		B080E5A11A0280FC00C819A4 /* IPSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSearchController.m; sourceTree = "<group>"; };
 		B0845B4C1A01F52F00776F30 /* PhoneSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneSearchController.h; sourceTree = "<group>"; };
 		B0845B4D1A01F52F00776F30 /* PhoneSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneSearchController.m; sourceTree = "<group>"; };
 		B0845B511A020EDB00776F30 /* Currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currency.plist; sourceTree = "<group>"; };
@@ -539,6 +542,8 @@
 				B0845B541A02131F00776F30 /* CurrencySearchController.m */,
 				B080E5971A0261EB00C819A4 /* DreamAnalysisController.h */,
 				B080E5981A0261EB00C819A4 /* DreamAnalysisController.m */,
+				B080E5A01A0280FC00C819A4 /* IPSearchController.h */,
+				B080E5A11A0280FC00C819A4 /* IPSearchController.m */,
 			);
 			path = SearchControllers;
 			sourceTree = "<group>";
@@ -1289,6 +1294,7 @@
 				B05CFA2F19FE7D3F00742155 /* MJIvar.m in Sources */,
 				B09ED69319FF7DD3009CA841 /* RETableViewItem.m in Sources */,
 				B09ED67D19FF7DD3009CA841 /* RETableViewPickerCell.m in Sources */,
+				B080E5A21A0280FC00C819A4 /* IPSearchController.m in Sources */,
 				B09ED68A19FF7DD3009CA841 /* RERadioItem.m in Sources */,
 				B0385A6D1A01150E00F51EF7 /* SimpleWeatherView.m in Sources */,
 				B0385A601A01150E00F51EF7 /* ProductCollectionController.m in Sources */,
