@@ -1,24 +1,23 @@
 //
-//  IDCardsSearchController.m
+//  DreamAnalysisController.m
 //  KnowingLife
 //
-//  Created by tanyang on 14/10/29.
+//  Created by tanyang on 14/10/30.
 //  Copyright (c) 2014年 tany. All rights reserved.
 //
 
-#import "IDCardsSearchController.h"
+#import "DreamAnalysisController.h"
 #import "RETableViewManager.h"
-#import "KLSearchHttpTool.h"
 #import "MBProgressHUD+MJ.h"
+#import "KLSearchHttpTool.h"
 
-@interface IDCardsSearchController ()
+@interface DreamAnalysisController ()
 @property (nonatomic, strong) RETableViewManager *manager;
+@property (nonatomic, strong) RETextItem *dreamItem;
 @property (nonatomic, strong) RETableViewSection *resultSection;
-@property (nonatomic, strong) RETableViewSection *IDCardsection;
-
 @end
 
-@implementation IDCardsSearchController
+@implementation DreamAnalysisController
 
 - (instancetype)init
 {
@@ -31,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"国内身份证查询验证";
+    self.title = @"各国货币汇率查询";
     
     self.manager = [[RETableViewManager alloc]initWithTableView:self.tableView];
     self.manager.style.cellHeight = 36;
@@ -44,25 +43,26 @@
     
     // 添加第三组 查询按钮
     [self addSectionButton];
+    
 }
 
 // 添加第一个组 查询
 - (void)addSectionSearch
 {
-    UIImage *image = [UIImage imageNamed:@"s3"];
+    UIImage *image = [UIImage imageNamed:@"a6"];
     UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
     imageView.bounds = CGRectMake(0, 0, self.view.frame.size.width, 100);
     imageView.contentMode = UIViewContentModeCenter;
     
     // 添加头部视图
-    RETableViewSection *IDCardsection = [RETableViewSection sectionWithHeaderView:imageView];
-    IDCardsection.footerTitle = @"身份证验证查询系统,请勿用于非法途径!";
+    RETableViewSection *headerSection = [RETableViewSection sectionWithHeaderView:imageView];
+    [self.manager addSection:headerSection];
+    headerSection.footerTitle = @"目前最完善的周公解梦数据！大约收录梦境关键词数据4500多条，并且结合现代梦境的解释含义，权威精准又富有娱乐性！";
     
-    [self.manager addSection:IDCardsection];
-    self.IDCardsection = IDCardsection;
+    RETextItem *dreamItem = [RETextItem itemWithTitle:@"梦境:" value:nil placeholder:@"请输入梦境关键字"];
+    [headerSection addItem:dreamItem];
+    self.dreamItem = dreamItem;
     
-    RETextItem *IDCardItem = [RETextItem itemWithTitle:@"身份证号码:" value:nil placeholder:@"请输入身份证号码"];
-    [IDCardsection addItem:IDCardItem];
 }
 
 // 添加第二个组 结果
@@ -84,12 +84,9 @@
     RETableViewItem *buttonItem = [RETableViewItem itemWithTitle:@"查询" accessoryType:UITableViewCellAccessoryNone selectionHandler:^(RETableViewItem *item) {
         //item.title = @"Pressed!";
         
-        // 读取item数据
-        RETextItem *IDCarditem = weakSelf.IDCardsection.items[0];
-        
-        if (IDCarditem.value) {
+        if (weakSelf.dreamItem.value) {
             // 查询数据
-            [weakSelf getIDCardData:IDCarditem.value];
+            [weakSelf getDreamDataWithKey:weakSelf.dreamItem.value];
             [MBProgressHUD showMessage:@"查询中..."];
         }
         
@@ -98,39 +95,37 @@
     }];
     buttonItem.textAlignment = NSTextAlignmentCenter;
     [section addItem:buttonItem];
-
+    
 }
 
-// 查询数据
-- (void)getIDCardData:(NSString *)IDCard
+- (void)getDreamDataWithKey:(NSString *)dreamKey
 {
     __typeof (self) __weak weakSelf = self;
-    [KLSearchHttpTool getIDCardData:IDCard success:^(id json) {
+    [KLSearchHttpTool getDreamDataWithKey:dreamKey success:^(id json) {
         KLLog(@"%@",json);
-        NSDictionary *dic = json;
-        NSNumber *error = dic[@"error"];
+        //NSDictionary *dic = json;
         
         // 清除所有items
         [weakSelf.resultSection removeAllItems];
         
-        // 是否成功
-        if (error.integerValue == 0) {
-            // 生日
-            WBSubtitleItem *item = [WBSubtitleItem itemWithTitle:@"生日:" rightSubtitle:dic[@"birthday"]];
-            [weakSelf.resultSection addItem:item];
+        if ([json isKindOfClass:[NSArray class]]) {
+            // 没有错误
+            NSArray *array = json;
+            for (NSString *result in array) {
+                
+                // 去掉换行
+                NSString *newResult = [result stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+                newResult = [newResult stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+                
+                // 添加结果
+                [weakSelf.resultSection addItem:[MultilineTextItem itemWithTitle:newResult font:[UIFont systemFontOfSize:14]]];
+            }
             
-            // 性别
-            NSNumber *sex = dic[@"sex"];
-            NSString *sexstr = sex.integerValue ? @"男":@"女";
-            item = [WBSubtitleItem itemWithTitle:@"性别:" rightSubtitle:sexstr];
-            [weakSelf.resultSection addItem:item];
-            
-            // 地区
-            item = [WBSubtitleItem itemWithTitle:@"地区:" rightSubtitle:dic[@"region"]];
-            [weakSelf.resultSection addItem:item];
         } else {
-            [weakSelf.resultSection addItem:[RETableViewItem itemWithTitle:@"查询失败，身份证号码输入错误！"]];
+            // 查询失败
+            [weakSelf.resultSection addItem:@"查询失败，只支持中文查找"];
         }
+        
         
         // 重新加载section
         [weakSelf.resultSection reloadSectionWithAnimation:UITableViewRowAnimationAutomatic];
@@ -143,14 +138,7 @@
 
 - (void)dealloc
 {
-    KLLog(@"IDCardsSearchController dealloc");
+    KLLog(@"DreamAnalysisController dealloc");
 }
-
-/* 返回数据
- birthday = "1991-10-02";
- error = 0;
- region = "\U6e56\U5357\U7701 \U6e58\U6f6d\U5e02 \U6e58\U6f6d\U53bf";
- sex = 1;
- */
 
 @end

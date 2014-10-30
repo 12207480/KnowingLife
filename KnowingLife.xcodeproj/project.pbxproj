@@ -57,6 +57,12 @@
 		B05CFA3419FE7D3F00742155 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B05CFA2719FE7D3F00742155 /* NSObject+MJCoding.m */; };
 		B05CFA3519FE7D3F00742155 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B05CFA2919FE7D3F00742155 /* NSObject+MJKeyValue.m */; };
 		B05CFA3619FE7D3F00742155 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = B05CFA2B19FE7D3F00742155 /* NSObject+MJMember.m */; };
+		B080E5991A0261EB00C819A4 /* DreamAnalysisController.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E5981A0261EB00C819A4 /* DreamAnalysisController.m */; };
+		B080E59C1A026B3400C819A4 /* MultilineTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E59B1A026B3400C819A4 /* MultilineTextCell.m */; };
+		B080E59F1A026B5000C819A4 /* MultilineTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E59E1A026B5000C819A4 /* MultilineTextItem.m */; };
+		B0845B4E1A01F52F00776F30 /* PhoneSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0845B4D1A01F52F00776F30 /* PhoneSearchController.m */; };
+		B0845B521A020EDB00776F30 /* Currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0845B511A020EDB00776F30 /* Currency.plist */; };
+		B0845B551A02131F00776F30 /* CurrencySearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0845B541A02131F00776F30 /* CurrencySearchController.m */; };
 		B09ED60219FF5F01009CA841 /* REMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B09ED5FA19FF5F01009CA841 /* REMenu.m */; };
 		B09ED60319FF5F01009CA841 /* REMenuContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B09ED5FC19FF5F01009CA841 /* REMenuContainerView.m */; };
 		B09ED60419FF5F01009CA841 /* REMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B09ED5FE19FF5F01009CA841 /* REMenuItem.m */; };
@@ -251,6 +257,17 @@
 		B05CFA2919FE7D3F00742155 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		B05CFA2A19FE7D3F00742155 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		B05CFA2B19FE7D3F00742155 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
+		B080E5971A0261EB00C819A4 /* DreamAnalysisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamAnalysisController.h; sourceTree = "<group>"; };
+		B080E5981A0261EB00C819A4 /* DreamAnalysisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamAnalysisController.m; sourceTree = "<group>"; };
+		B080E59A1A026B3400C819A4 /* MultilineTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultilineTextCell.h; sourceTree = "<group>"; };
+		B080E59B1A026B3400C819A4 /* MultilineTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultilineTextCell.m; sourceTree = "<group>"; };
+		B080E59D1A026B5000C819A4 /* MultilineTextItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultilineTextItem.h; sourceTree = "<group>"; };
+		B080E59E1A026B5000C819A4 /* MultilineTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultilineTextItem.m; sourceTree = "<group>"; };
+		B0845B4C1A01F52F00776F30 /* PhoneSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneSearchController.h; sourceTree = "<group>"; };
+		B0845B4D1A01F52F00776F30 /* PhoneSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneSearchController.m; sourceTree = "<group>"; };
+		B0845B511A020EDB00776F30 /* Currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currency.plist; sourceTree = "<group>"; };
+		B0845B531A02131F00776F30 /* CurrencySearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencySearchController.h; sourceTree = "<group>"; };
+		B0845B541A02131F00776F30 /* CurrencySearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencySearchController.m; sourceTree = "<group>"; };
 		B09ED5F919FF5F01009CA841 /* REMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenu.h; sourceTree = "<group>"; };
 		B09ED5FA19FF5F01009CA841 /* REMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenu.m; sourceTree = "<group>"; };
 		B09ED5FB19FF5F01009CA841 /* REMenuContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenuContainerView.h; sourceTree = "<group>"; };
@@ -516,6 +533,12 @@
 			children = (
 				B0385A7B1A01261D00F51EF7 /* IDCardsSearchController.h */,
 				B0385A7C1A01261D00F51EF7 /* IDCardsSearchController.m */,
+				B0845B4C1A01F52F00776F30 /* PhoneSearchController.h */,
+				B0845B4D1A01F52F00776F30 /* PhoneSearchController.m */,
+				B0845B531A02131F00776F30 /* CurrencySearchController.h */,
+				B0845B541A02131F00776F30 /* CurrencySearchController.m */,
+				B080E5971A0261EB00C819A4 /* DreamAnalysisController.h */,
+				B080E5981A0261EB00C819A4 /* DreamAnalysisController.m */,
 			);
 			path = SearchControllers;
 			sourceTree = "<group>";
@@ -527,6 +550,10 @@
 				B0420BF71A013E8A00D3A363 /* WBSubtitleCell.m */,
 				B0420BF81A013E8A00D3A363 /* WBSubtitleItem.h */,
 				B0420BF91A013E8A00D3A363 /* WBSubtitleItem.m */,
+				B080E59A1A026B3400C819A4 /* MultilineTextCell.h */,
+				B080E59B1A026B3400C819A4 /* MultilineTextCell.m */,
+				B080E59D1A026B5000C819A4 /* MultilineTextItem.h */,
+				B080E59E1A026B5000C819A4 /* MultilineTextItem.m */,
 			);
 			path = Coustoms;
 			sourceTree = "<group>";
@@ -937,6 +964,7 @@
 				B05CFA1219FE777000742155 /* ProvincesAndCities.plist */,
 				B0A76A9319FCC5E000850748 /* Info.plist */,
 				B0A76A9419FCC5E000850748 /* main.m */,
+				B0845B511A020EDB00776F30 /* Currency.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1135,6 +1163,7 @@
 				B09ED61119FF7DA8009CA841 /* MBProgressHUD.bundle in Resources */,
 				B0385A5D1A01150E00F51EF7 /* HeaderViewCell.xib in Resources */,
 				B0385A6E1A01150E00F51EF7 /* SimpleWeatherView.xib in Resources */,
+				B0845B521A020EDB00776F30 /* Currency.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1158,6 +1187,7 @@
 				B09ED67C19FF7DD3009CA841 /* RETableViewOptionCell.m in Sources */,
 				B09ED6E219FF7DF1009CA841 /* SDWebImagePrefetcher.m in Sources */,
 				B05CFA3519FE7D3F00742155 /* NSObject+MJKeyValue.m in Sources */,
+				B080E59C1A026B3400C819A4 /* MultilineTextCell.m in Sources */,
 				B05CF9EB19FE3ED200742155 /* KLHttpTool.m in Sources */,
 				B05CFA0319FE3F3100742155 /* AFHTTPSessionManager.m in Sources */,
 				B09ED68119FF7DD3009CA841 /* RECreditCardItem.m in Sources */,
@@ -1235,9 +1265,11 @@
 				B09ED6DB19FF7DF1009CA841 /* NSData+ImageContentType.m in Sources */,
 				B09ED6DF19FF7DF1009CA841 /* SDWebImageDownloader.m in Sources */,
 				B05CFA0519FE3F3100742155 /* AFSecurityPolicy.m in Sources */,
+				B080E5991A0261EB00C819A4 /* DreamAnalysisController.m in Sources */,
 				B0A76A9519FCC5E000850748 /* main.m in Sources */,
 				B05CFA0219FE3F3100742155 /* AFHTTPRequestOperationManager.m in Sources */,
 				B09ED69B19FF7DD4009CA841 /* REEmailValidator.m in Sources */,
+				B0845B551A02131F00776F30 /* CurrencySearchController.m in Sources */,
 				B09ED6E719FF7DF1009CA841 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B09ED67819FF7DD3009CA841 /* RETableViewInlineDatePickerCell.m in Sources */,
 				B09ED67419FF7DD3009CA841 /* RETableViewBoolCell.m in Sources */,
@@ -1249,6 +1281,7 @@
 				B0241B0E19FFCBBA00D94F3E /* AboutViewController.m in Sources */,
 				B0420BFB1A013E8A00D3A363 /* WBSubtitleItem.m in Sources */,
 				B0385A6A1A01150E00F51EF7 /* KLSearchHttpTool.m in Sources */,
+				B0845B4E1A01F52F00776F30 /* PhoneSearchController.m in Sources */,
 				B09ED69519FF7DD4009CA841 /* RETableViewManager.m in Sources */,
 				B09ED6EC19FF8D5D009CA841 /* KLMoreViewController.m in Sources */,
 				B0385A5E1A01150E00F51EF7 /* ProductCell.m in Sources */,
@@ -1265,6 +1298,7 @@
 				B09ED6E919FF7DF1009CA841 /* UIView+WebCacheOperation.m in Sources */,
 				B09ED6D919FF7DF1009CA841 /* UIView+MJExtension.m in Sources */,
 				B09ED69619FF7DD4009CA841 /* RETableViewOptionsController.m in Sources */,
+				B080E59F1A026B5000C819A4 /* MultilineTextItem.m in Sources */,
 				B09ED6DA19FF7DF1009CA841 /* MKAnnotationView+WebCache.m in Sources */,
 				B0458ED51A00D20500D5A077 /* CSStickyHeaderFlowLayout.m in Sources */,
 				B09ED6DE19FF7DF1009CA841 /* SDWebImageDecoder.m in Sources */,

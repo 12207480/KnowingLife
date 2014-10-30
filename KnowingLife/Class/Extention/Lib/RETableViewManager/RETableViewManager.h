@@ -53,6 +53,8 @@
 #import "REInlinePickerItem.h"
 #import "WBSubtitleItem.h"
 #import "WBSubtitleCell.h"
+#import "MultilineTextItem.h"
+#import "MultilineTextCell.h"
 
 @protocol RETableViewManagerDelegate;
 

@@ -18,6 +18,14 @@
     return item;
 }
 
++ (WBSubtitleItem *)itemWithTitle:(NSString *)title rightSubtitle:(NSString *)subtitle
+{
+    WBSubtitleItem *item = [WBSubtitleItem itemWithTitle:title subtitle:subtitle];
+    item.subtitleFont = [UIFont systemFontOfSize:16];
+    item.subtitleAlignment = NSTextAlignmentRight;
+    return item;
+}
+
 + (WBSubtitleItem *)itemWithTitle:(NSString *)title imageName:(NSString *)imageName
 {
     WBSubtitleItem *item = [[WBSubtitleItem alloc]init];

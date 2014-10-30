@@ -53,4 +53,66 @@
     }];
 }
 
++ (void)getPhoneData:(NSString *)phone success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    // 请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"mobile"] = phone;
+    params[@"format"] = @"json";
+    
+    // 发送请求
+    [KLHttpTool getWithURL:@"http://api.uihoo.com/mobile/mobile.http.php?" params:params success:^(id json) {
+        if (success) {
+            success(json);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+            NSLog(@"%@",error);
+        }
+    }];
+
+}
+
++ (void)getCurrencyDataWithFrom:(NSString *)from to:(NSString *)to success:(void (^)(id json))success failure:(void (^)(NSError *error))failure
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"from"] = from;
+    params[@"to"] = to;
+    params[@"format"] = @"json";
+    
+    // 发送请求
+    [KLHttpTool getWithURL:@"http://api.uihoo.com/currency/currency.http.php?" params:params success:^(id json) {
+        if (success) {
+            success(json);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+            NSLog(@"%@",error);
+        }
+    }];
+
+}
+
++ (void)getDreamDataWithKey:(NSString *)dreamKey success:(void (^)(id json))success failure:(void (^)(NSError *error))failure
+{
+    // 请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"key"] = dreamKey;
+    params[@"format"] = @"json";
+    
+    // 发送请求
+    [KLHttpTool getWithURL:@"http://api.uihoo.com/dream/dream.http.php?" params:params success:^(id json) {
+        if (success) {
+            success(json);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+            NSLog(@"%@",error);
+        }
+    }];
+}
+
 @end

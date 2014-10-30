@@ -1,24 +1,23 @@
 //
-//  IDCardsSearchController.m
+//  PhoneSearchController.m
 //  KnowingLife
 //
-//  Created by tanyang on 14/10/29.
+//  Created by tanyang on 14/10/30.
 //  Copyright (c) 2014年 tany. All rights reserved.
 //
 
-#import "IDCardsSearchController.h"
+#import "PhoneSearchController.h"
 #import "RETableViewManager.h"
-#import "KLSearchHttpTool.h"
 #import "MBProgressHUD+MJ.h"
+#import "KLSearchHttpTool.h"
 
-@interface IDCardsSearchController ()
+@interface PhoneSearchController ()
 @property (nonatomic, strong) RETableViewManager *manager;
+@property (nonatomic, strong) RETextItem *phoneItem;
 @property (nonatomic, strong) RETableViewSection *resultSection;
-@property (nonatomic, strong) RETableViewSection *IDCardsection;
-
 @end
 
-@implementation IDCardsSearchController
+@implementation PhoneSearchController
 
 - (instancetype)init
 {
@@ -31,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"国内身份证查询验证";
+    self.title = @"手机归属地查询";
     
     self.manager = [[RETableViewManager alloc]initWithTableView:self.tableView];
     self.manager.style.cellHeight = 36;
@@ -49,20 +48,20 @@
 // 添加第一个组 查询
 - (void)addSectionSearch
 {
-    UIImage *image = [UIImage imageNamed:@"s3"];
+    UIImage *image = [UIImage imageNamed:@"a1"];
     UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
     imageView.bounds = CGRectMake(0, 0, self.view.frame.size.width, 100);
     imageView.contentMode = UIViewContentModeCenter;
     
     // 添加头部视图
-    RETableViewSection *IDCardsection = [RETableViewSection sectionWithHeaderView:imageView];
-    IDCardsection.footerTitle = @"身份证验证查询系统,请勿用于非法途径!";
+    RETableViewSection *headerSection = [RETableViewSection sectionWithHeaderView:imageView];
+    headerSection.footerTitle = @"手机号码归属地查询，可查询中国移动，中国联通，中国电信手机号段归属地信息.";
+    [self.manager addSection:headerSection];
     
-    [self.manager addSection:IDCardsection];
-    self.IDCardsection = IDCardsection;
-    
-    RETextItem *IDCardItem = [RETextItem itemWithTitle:@"身份证号码:" value:nil placeholder:@"请输入身份证号码"];
-    [IDCardsection addItem:IDCardItem];
+    RETextItem *phoneItem = [RETextItem itemWithTitle:@"手机号码:" value:nil placeholder:@"请输入待查询的手机号码"];
+    phoneItem.keyboardType = UIKeyboardTypeNumberPad;
+    [headerSection addItem:phoneItem];
+    self.phoneItem = phoneItem;
 }
 
 // 添加第二个组 结果
@@ -83,13 +82,10 @@
     __typeof (self) __weak weakSelf = self;
     RETableViewItem *buttonItem = [RETableViewItem itemWithTitle:@"查询" accessoryType:UITableViewCellAccessoryNone selectionHandler:^(RETableViewItem *item) {
         //item.title = @"Pressed!";
-        
-        // 读取item数据
-        RETextItem *IDCarditem = weakSelf.IDCardsection.items[0];
-        
-        if (IDCarditem.value) {
+     
+        if (weakSelf.phoneItem.value) {
             // 查询数据
-            [weakSelf getIDCardData:IDCarditem.value];
+            [weakSelf getPhoneData:weakSelf.phoneItem.value];
             [MBProgressHUD showMessage:@"查询中..."];
         }
         
@@ -98,14 +94,13 @@
     }];
     buttonItem.textAlignment = NSTextAlignmentCenter;
     [section addItem:buttonItem];
-
+    
 }
 
-// 查询数据
-- (void)getIDCardData:(NSString *)IDCard
+- (void)getPhoneData:(NSString *)phone
 {
     __typeof (self) __weak weakSelf = self;
-    [KLSearchHttpTool getIDCardData:IDCard success:^(id json) {
+    [KLSearchHttpTool getPhoneData:phone success:^(id json) {
         KLLog(@"%@",json);
         NSDictionary *dic = json;
         NSNumber *error = dic[@"error"];
@@ -115,21 +110,22 @@
         
         // 是否成功
         if (error.integerValue == 0) {
-            // 生日
-            WBSubtitleItem *item = [WBSubtitleItem itemWithTitle:@"生日:" rightSubtitle:dic[@"birthday"]];
-            [weakSelf.resultSection addItem:item];
+            // 添加item
+            // 手机号码
+            NSString *phoneNum = weakSelf.phoneItem.value;
+            [weakSelf.resultSection addItem:[WBSubtitleItem itemWithTitle:@"号码:" rightSubtitle:phoneNum]];
             
-            // 性别
-            NSNumber *sex = dic[@"sex"];
-            NSString *sexstr = sex.integerValue ? @"男":@"女";
-            item = [WBSubtitleItem itemWithTitle:@"性别:" rightSubtitle:sexstr];
-            [weakSelf.resultSection addItem:item];
+            // 卡号类型
+            [weakSelf.resultSection addItem:[WBSubtitleItem itemWithTitle:@"卡类型:" rightSubtitle:dic[@"type"]]];
             
-            // 地区
-            item = [WBSubtitleItem itemWithTitle:@"地区:" rightSubtitle:dic[@"region"]];
-            [weakSelf.resultSection addItem:item];
+            // 区号
+            [weakSelf.resultSection addItem:[WBSubtitleItem itemWithTitle:@"区号:" rightSubtitle:dic[@"code"]]];
+            
+            // 归属地
+            [weakSelf.resultSection addItem:[WBSubtitleItem itemWithTitle:@"归属地:" rightSubtitle:dic[@"city"]]];
         } else {
-            [weakSelf.resultSection addItem:[RETableViewItem itemWithTitle:@"查询失败，身份证号码输入错误！"]];
+            // 查询失败
+            [weakSelf.resultSection addItem:[RETableViewItem itemWithTitle:@"查询失败，手机号码输入错误！"]];
         }
         
         // 重新加载section
@@ -141,16 +137,16 @@
     }];
 }
 
+/*{返回数据
+ city = "\U5e7f\U4e1c \U6df1\U5733";
+ code = 0755;
+ error = 0;
+ type = "\U5e7f\U4e1c\U79fb\U52a8\U5168\U7403\U901a\U5361";
+ }*/
+
 - (void)dealloc
 {
-    KLLog(@"IDCardsSearchController dealloc");
+    KLLog(@"PhoneSearchController dealloc");
 }
-
-/* 返回数据
- birthday = "1991-10-02";
- error = 0;
- region = "\U6e56\U5357\U7701 \U6e58\U6f6d\U5e02 \U6e58\U6f6d\U53bf";
- sex = 1;
- */
 
 @end

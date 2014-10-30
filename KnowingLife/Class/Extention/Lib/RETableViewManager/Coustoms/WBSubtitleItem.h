@@ -15,6 +15,8 @@
 
 + (WBSubtitleItem *)itemWithTitle:(NSString *)title subtitle:(NSString *)subtitle;
 
++ (WBSubtitleItem *)itemWithTitle:(NSString *)title rightSubtitle:(NSString *)subtitle;
+
 + (WBSubtitleItem *)itemWithTitle:(NSString *)title subtitle:(NSString *)subtitle imageName:(NSString *)imageName;
 
 + (WBSubtitleItem *)itemWithTitle:(NSString *)title imageName:(NSString *)imageName;

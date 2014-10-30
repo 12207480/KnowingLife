@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>CNY - 人民币</string>
+	<string>HKD - 港元</string>
+	<string>MOP - 澳门币</string>
+	<string>FRF - 法国法郎</string>
+	<string>CHF - 瑞士法郎</string>
+	<string>ECU - 欧元</string>
+	<string>USD - 美元</string>
+	<string>CAD - 加拿大元</string>
+	<string>GBP - 英镑</string>
+	<string>RUB - 俄罗斯卢布</string>
+	<string>NLG - 荷兰盾</string>
+	<string>DEM - 德国马克</string>
+	<string>BEF - 比利时法郎</string>
+	<string>JPY - 日元</string>
+	<string>AUD - 澳大利亚元</string>
+	<string>BRZ - 巴西克鲁赛罗</string>
+	<string>FIM - 芬兰马克</string>
+	<string>NR - 印度卢比</string>
+	<string>ITL - 意大利里拉</string>
+	<string>KRW - 韩币</string>
+	<string>MYR - 马来西亚林吉特</string>
+	<string>MXP - 墨西哥比索</string>
+	<string>NZD - 新西兰元</string>
+	<string>PHP - 比索</string>
+	<string>SGD - 新加坡元</string>
+	<string>THB - 泰国铢</string>
+	<string>VND - 越南盾</string>
+	<string>TRL - 土耳其里拉</string>
+	<string>ZAR - 南非兰特</string>
+</array>
+</plist>
