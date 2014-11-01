@@ -27,4 +27,16 @@
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc]initWithCustomView:button];
 }
+
++ (UIBarButtonItem *)itemWithTitle:(NSString *)tilte
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = (CGRect){CGPointZero,CGSizeMake(50, 36)};
+    [button setTitle:tilte forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    return [[UIBarButtonItem alloc]initWithCustomView:button];
+}
+
 @end

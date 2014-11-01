@@ -24,6 +24,9 @@
 #import "CurrencySearchController.h"
 #import "DreamAnalysisController.h"
 #import "IPSearchController.h"
+#import "FangDaiViewController.h"
+#import "RevenueController.h"
+#import "KLLotteryViewController.h"
 
 @interface ProductCollectionController ()<CitysViewdelegate>
 @property (nonatomic, strong) NSMutableArray *sections;
@@ -157,9 +160,10 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
 - (void)addSectionCaculate
 {
     ProductSection *section = [ProductSection section];
-    section.headerTitle = @"生活查询";
-    ProductItem *item0 = [ProductItem itemWithTitle:@"彩票" icon:@"caipiao"];
-    ProductItem *item1 = [ProductItem itemWithTitle:@"有道" icon:@"youdao"];
+    section.headerTitle = @"贷款计算";
+    ProductItem *item0 = [ProductItem itemWithTitle:@"房贷计算" icon:@"a8" destVcClass:[FangDaiViewController class]];
+    
+    ProductItem *item1 = [ProductItem itemWithTitle:@"税收计算" icon:@"s7" destVcClass:[RevenueController class]];
     
     [section.items addObjectsFromArray:@[item0,item1]];
     [self.sections addObject:section];
@@ -168,11 +172,10 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
 - (void)addSectionTicket
 {
     ProductSection *section = [ProductSection section];
-    section.headerTitle = @"生活查询";
-    ProductItem *item0 = [ProductItem itemWithTitle:@"彩票" icon:@"caipiao"];
-    ProductItem *item1 = [ProductItem itemWithTitle:@"有道" icon:@"youdao"];
+    section.headerTitle = @"彩票开奖";
+    ProductItem *item0 = [ProductItem itemWithTitle:@"网易彩票" icon:@"a2" destVcClass:[KLLotteryViewController class]];
     
-    [section.items addObjectsFromArray:@[item0,item1]];
+    [section.items addObjectsFromArray:@[item0]];
     [self.sections addObject:section];
 }
 

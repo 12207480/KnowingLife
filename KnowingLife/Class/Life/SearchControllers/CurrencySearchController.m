@@ -85,7 +85,7 @@
     self.swapIn = swapIn;
     
     RETextItem * numberItem = [RETextItem itemWithTitle:@"兑换金额:" value:nil placeholder:@"请输入兑换金额"];
-    numberItem.keyboardType = UIKeyboardTypeNumberPad;
+    numberItem.keyboardType = UIKeyboardTypeDecimalPad;
     [headerSection addItem:numberItem];
     self.numberItem = numberItem;
 }

@@ -25,4 +25,7 @@
 // 获得梦境信息
 + (void)getDreamDataWithKey:(NSString *)dreamKey success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
 
+// 获得IP地址数据
++ (void)getIPDataWithIP:(NSString *)IP success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
+
 @end

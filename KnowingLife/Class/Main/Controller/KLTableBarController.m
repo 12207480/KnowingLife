@@ -10,11 +10,11 @@
 #import "UIImage+WB.h"
 #import "WBTabBar.h"
 #import "KLNavigationController.h"
-#import "ViewController.h"
 #import "KLNewsViewController.h"
 #import "KLMoreViewController.h"
 #import "ProductCollectionController.h"
 #import "CSStickyHeaderFlowLayout.h"
+#import "KLGroupBuyController.h"
 
 @interface KLTableBarController ()<WBTabbarDekegate>
 @property (nonatomic, weak) WBTabBar *customTabBar;
@@ -92,7 +92,7 @@
     [self addChildViewControl:news title:@"新闻" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
     
     // 广场控制器
-    ViewController *discover = [[ViewController alloc]init];
+    KLGroupBuyController *discover = [[KLGroupBuyController alloc]init];
     //discover.tabBarItem.badgeValue = @"60";
     [self addChildViewControl:discover title:@"团购" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
     

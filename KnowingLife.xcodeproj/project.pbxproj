@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01C34E81A04BD9F00B7082B /* KLGroupBuyController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34E71A04BD9F00B7082B /* KLGroupBuyController.m */; };
+		B01C34EB1A04C81C00B7082B /* KLCitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34EA1A04C81C00B7082B /* KLCitiesViewController.m */; };
+		B01C34EF1A04D06A00B7082B /* KLBaseCity.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34EE1A04D06A00B7082B /* KLBaseCity.m */; };
+		B01C34F21A04D0B400B7082B /* KLCItyDistrict.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34F11A04D0B400B7082B /* KLCItyDistrict.m */; };
+		B01C34F51A04D10800B7082B /* KLCity.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34F41A04D10800B7082B /* KLCity.m */; };
+		B01C34F81A04D1B200B7082B /* KLCitySection.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34F71A04D1B200B7082B /* KLCitySection.m */; };
+		B01C34FC1A04D35A00B7082B /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01C34F91A04D35A00B7082B /* Categories.plist */; };
+		B01C34FD1A04D35A00B7082B /* Cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01C34FA1A04D35A00B7082B /* Cities.plist */; };
+		B01C34FE1A04D35A00B7082B /* Orders.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01C34FB1A04D35A00B7082B /* Orders.plist */; };
+		B01C35021A04D87900B7082B /* KLCityDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C35011A04D87900B7082B /* KLCityDataTool.m */; };
 		B0241B0919FFC6F300D94F3E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0241B0819FFC6F300D94F3E /* MessageUI.framework */; };
 		B0241B0E19FFCBBA00D94F3E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0241B0C19FFCBBA00D94F3E /* AboutViewController.m */; };
 		B0241B0F19FFCBBA00D94F3E /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0241B0D19FFCBBA00D94F3E /* AboutViewController.xib */; };
@@ -61,6 +71,9 @@
 		B080E59C1A026B3400C819A4 /* MultilineTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E59B1A026B3400C819A4 /* MultilineTextCell.m */; };
 		B080E59F1A026B5000C819A4 /* MultilineTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E59E1A026B5000C819A4 /* MultilineTextItem.m */; };
 		B080E5A21A0280FC00C819A4 /* IPSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E5A11A0280FC00C819A4 /* IPSearchController.m */; };
+		B080E5AA1A028ADA00C819A4 /* ExpendTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E5A51A028ADA00C819A4 /* ExpendTableView.m */; };
+		B080E5AB1A028ADA00C819A4 /* FangDaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E5A71A028ADA00C819A4 /* FangDaiViewController.m */; };
+		B080E5AC1A028ADA00C819A4 /* FangResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B080E5A91A028ADA00C819A4 /* FangResultViewController.m */; };
 		B0845B4E1A01F52F00776F30 /* PhoneSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0845B4D1A01F52F00776F30 /* PhoneSearchController.m */; };
 		B0845B521A020EDB00776F30 /* Currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0845B511A020EDB00776F30 /* Currency.plist */; };
 		B0845B551A02131F00776F30 /* CurrencySearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0845B541A02131F00776F30 /* CurrencySearchController.m */; };
@@ -143,7 +156,6 @@
 		B09ED6EC19FF8D5D009CA841 /* KLMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09ED6EB19FF8D5D009CA841 /* KLMoreViewController.m */; };
 		B0A76A9519FCC5E000850748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76A9419FCC5E000850748 /* main.m */; };
 		B0A76A9819FCC5E000850748 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76A9719FCC5E000850748 /* AppDelegate.m */; };
-		B0A76A9B19FCC5E000850748 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76A9A19FCC5E000850748 /* ViewController.m */; };
 		B0A76AA019FCC5E000850748 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A76A9F19FCC5E000850748 /* Images.xcassets */; };
 		B0A76AAF19FCC5E000850748 /* KnowingLifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76AAE19FCC5E000850748 /* KnowingLifeTests.m */; };
 		B0A76ABF19FCC7E100850748 /* KLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76ABE19FCC7E100850748 /* KLNavigationController.m */; };
@@ -151,6 +163,8 @@
 		B0A76ACA19FCCA0500850748 /* UIBarButtonItem+WB.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76AC619FCCA0500850748 /* UIBarButtonItem+WB.m */; };
 		B0A76ACB19FCCA0500850748 /* NSDate+WB.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76AC819FCCA0500850748 /* NSDate+WB.m */; };
 		B0A777DD19FF358A006F8BD5 /* KLNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A777DC19FF358A006F8BD5 /* KLNewsViewController.m */; };
+		B0ACAF9B1A0358F700709F9B /* RevenueController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACAF9A1A0358F700709F9B /* RevenueController.m */; };
+		B0ACAFA01A036FDC00709F9B /* KLLotteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACAF9F1A036FDC00709F9B /* KLLotteryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +178,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B01C34E61A04BD9F00B7082B /* KLGroupBuyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLGroupBuyController.h; sourceTree = "<group>"; };
+		B01C34E71A04BD9F00B7082B /* KLGroupBuyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLGroupBuyController.m; sourceTree = "<group>"; };
+		B01C34E91A04C81C00B7082B /* KLCitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCitiesViewController.h; sourceTree = "<group>"; };
+		B01C34EA1A04C81C00B7082B /* KLCitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCitiesViewController.m; sourceTree = "<group>"; };
+		B01C34ED1A04D06A00B7082B /* KLBaseCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBaseCity.h; sourceTree = "<group>"; };
+		B01C34EE1A04D06A00B7082B /* KLBaseCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBaseCity.m; sourceTree = "<group>"; };
+		B01C34F01A04D0B400B7082B /* KLCItyDistrict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCItyDistrict.h; sourceTree = "<group>"; };
+		B01C34F11A04D0B400B7082B /* KLCItyDistrict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCItyDistrict.m; sourceTree = "<group>"; };
+		B01C34F31A04D10800B7082B /* KLCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCity.h; sourceTree = "<group>"; };
+		B01C34F41A04D10800B7082B /* KLCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCity.m; sourceTree = "<group>"; };
+		B01C34F61A04D1B200B7082B /* KLCitySection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCitySection.h; sourceTree = "<group>"; };
+		B01C34F71A04D1B200B7082B /* KLCitySection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCitySection.m; sourceTree = "<group>"; };
+		B01C34F91A04D35A00B7082B /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
+		B01C34FA1A04D35A00B7082B /* Cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cities.plist; sourceTree = "<group>"; };
+		B01C34FB1A04D35A00B7082B /* Orders.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Orders.plist; sourceTree = "<group>"; };
+		B01C34FF1A04D83C00B7082B /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = Extention/Singleton.h; sourceTree = "<group>"; };
+		B01C35001A04D87900B7082B /* KLCityDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCityDataTool.h; sourceTree = "<group>"; };
+		B01C35011A04D87900B7082B /* KLCityDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCityDataTool.m; sourceTree = "<group>"; };
 		B0241B0819FFC6F300D94F3E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B0241B0B19FFCBBA00D94F3E /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		B0241B0C19FFCBBA00D94F3E /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -266,6 +298,12 @@
 		B080E59E1A026B5000C819A4 /* MultilineTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultilineTextItem.m; sourceTree = "<group>"; };
 		B080E5A01A0280FC00C819A4 /* IPSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSearchController.h; sourceTree = "<group>"; };
 		B080E5A11A0280FC00C819A4 /* IPSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSearchController.m; sourceTree = "<group>"; };
+		B080E5A41A028ADA00C819A4 /* ExpendTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpendTableView.h; sourceTree = "<group>"; };
+		B080E5A51A028ADA00C819A4 /* ExpendTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpendTableView.m; sourceTree = "<group>"; };
+		B080E5A61A028ADA00C819A4 /* FangDaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FangDaiViewController.h; sourceTree = "<group>"; };
+		B080E5A71A028ADA00C819A4 /* FangDaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FangDaiViewController.m; sourceTree = "<group>"; };
+		B080E5A81A028ADA00C819A4 /* FangResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FangResultViewController.h; sourceTree = "<group>"; };
+		B080E5A91A028ADA00C819A4 /* FangResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FangResultViewController.m; sourceTree = "<group>"; };
 		B0845B4C1A01F52F00776F30 /* PhoneSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneSearchController.h; sourceTree = "<group>"; };
 		B0845B4D1A01F52F00776F30 /* PhoneSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneSearchController.m; sourceTree = "<group>"; };
 		B0845B511A020EDB00776F30 /* Currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currency.plist; sourceTree = "<group>"; };
@@ -429,8 +467,6 @@
 		B0A76A9419FCC5E000850748 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B0A76A9619FCC5E000850748 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B0A76A9719FCC5E000850748 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B0A76A9919FCC5E000850748 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B0A76A9A19FCC5E000850748 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B0A76A9F19FCC5E000850748 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0A76AA819FCC5E000850748 /* KnowingLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnowingLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A76AAD19FCC5E000850748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -447,6 +483,10 @@
 		B0A76ACE19FCCC3C00850748 /* KnowingLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KnowingLife-Prefix.pch"; sourceTree = "<group>"; };
 		B0A777DB19FF358A006F8BD5 /* KLNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLNewsViewController.h; sourceTree = "<group>"; };
 		B0A777DC19FF358A006F8BD5 /* KLNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLNewsViewController.m; sourceTree = "<group>"; };
+		B0ACAF991A0358F700709F9B /* RevenueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevenueController.h; sourceTree = "<group>"; };
+		B0ACAF9A1A0358F700709F9B /* RevenueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevenueController.m; sourceTree = "<group>"; };
+		B0ACAF9E1A036FDC00709F9B /* KLLotteryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLLotteryViewController.h; sourceTree = "<group>"; };
+		B0ACAF9F1A036FDC00709F9B /* KLLotteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLLotteryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +508,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B01C34E21A04BD5A00B7082B /* GroupBuy */ = {
+			isa = PBXGroup;
+			children = (
+				B01C34E31A04BD5A00B7082B /* Controller */,
+				B01C34E51A04BD5A00B7082B /* View */,
+				B01C34E41A04BD5A00B7082B /* Model */,
+				B01C34EC1A04CFE200B7082B /* Tool */,
+			);
+			path = GroupBuy;
+			sourceTree = "<group>";
+		};
+		B01C34E31A04BD5A00B7082B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B01C34E61A04BD9F00B7082B /* KLGroupBuyController.h */,
+				B01C34E71A04BD9F00B7082B /* KLGroupBuyController.m */,
+				B01C34E91A04C81C00B7082B /* KLCitiesViewController.h */,
+				B01C34EA1A04C81C00B7082B /* KLCitiesViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B01C34E41A04BD5A00B7082B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B01C34ED1A04D06A00B7082B /* KLBaseCity.h */,
+				B01C34EE1A04D06A00B7082B /* KLBaseCity.m */,
+				B01C34F01A04D0B400B7082B /* KLCItyDistrict.h */,
+				B01C34F11A04D0B400B7082B /* KLCItyDistrict.m */,
+				B01C34F31A04D10800B7082B /* KLCity.h */,
+				B01C34F41A04D10800B7082B /* KLCity.m */,
+				B01C34F61A04D1B200B7082B /* KLCitySection.h */,
+				B01C34F71A04D1B200B7082B /* KLCitySection.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B01C34E51A04BD5A00B7082B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B01C34EC1A04CFE200B7082B /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B01C35001A04D87900B7082B /* KLCityDataTool.h */,
+				B01C35011A04D87900B7082B /* KLCityDataTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		B0241B0A19FFC70B00D94F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +670,7 @@
 		B05CF9D819FE260A00742155 /* Life */ = {
 			isa = PBXGroup;
 			children = (
+				B080E5A31A028A7F00C819A4 /* CaculateControllers */,
 				B0385A7A1A0125FB00F51EF7 /* SearchControllers */,
 				B0385A461A01150E00F51EF7 /* MainController */,
 				B0385A4E1A01150E00F51EF7 /* Model */,
@@ -666,6 +760,21 @@
 				B05CFA2B19FE7D3F00742155 /* NSObject+MJMember.m */,
 			);
 			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		B080E5A31A028A7F00C819A4 /* CaculateControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B080E5A41A028ADA00C819A4 /* ExpendTableView.h */,
+				B080E5A51A028ADA00C819A4 /* ExpendTableView.m */,
+				B080E5A61A028ADA00C819A4 /* FangDaiViewController.h */,
+				B080E5A71A028ADA00C819A4 /* FangDaiViewController.m */,
+				B080E5A81A028ADA00C819A4 /* FangResultViewController.h */,
+				B080E5A91A028ADA00C819A4 /* FangResultViewController.m */,
+				B0ACAF991A0358F700709F9B /* RevenueController.h */,
+				B0ACAF9A1A0358F700709F9B /* RevenueController.m */,
+			);
+			path = CaculateControllers;
 			sourceTree = "<group>";
 		};
 		B09ED5F619FF5F01009CA841 /* REMenu */ = {
@@ -954,8 +1063,6 @@
 				B0A76AB819FCC79300850748 /* Class */,
 				B0A76A9619FCC5E000850748 /* AppDelegate.h */,
 				B0A76A9719FCC5E000850748 /* AppDelegate.m */,
-				B0A76A9919FCC5E000850748 /* ViewController.h */,
-				B0A76A9A19FCC5E000850748 /* ViewController.m */,
 				B0A76A9F19FCC5E000850748 /* Images.xcassets */,
 				B0A76A9219FCC5E000850748 /* Supporting Files */,
 			);
@@ -966,6 +1073,9 @@
 			isa = PBXGroup;
 			children = (
 				B0A76ACE19FCCC3C00850748 /* KnowingLife-Prefix.pch */,
+				B01C34F91A04D35A00B7082B /* Categories.plist */,
+				B01C34FA1A04D35A00B7082B /* Cities.plist */,
+				B01C34FB1A04D35A00B7082B /* Orders.plist */,
 				B05CFA1219FE777000742155 /* ProvincesAndCities.plist */,
 				B0A76A9319FCC5E000850748 /* Info.plist */,
 				B0A76A9419FCC5E000850748 /* main.m */,
@@ -994,11 +1104,14 @@
 		B0A76AB819FCC79300850748 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				B01C34E21A04BD5A00B7082B /* GroupBuy */,
 				B0A777D919FF355B006F8BD5 /* News */,
 				B0A76ABA19FCC79300850748 /* Main */,
 				B05CF9D819FE260A00742155 /* Life */,
+				B0ACAF9C1A036F4500709F9B /* Lottery */,
 				B09ED60619FF7D3A009CA841 /* More */,
 				B0A76AB919FCC79300850748 /* Extention */,
+				B01C34FF1A04D83C00B7082B /* Singleton.h */,
 				B0A76AC119FCC94E00850748 /* KLComment.h */,
 			);
 			path = Class;
@@ -1073,6 +1186,23 @@
 			children = (
 				B0A777DB19FF358A006F8BD5 /* KLNewsViewController.h */,
 				B0A777DC19FF358A006F8BD5 /* KLNewsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B0ACAF9C1A036F4500709F9B /* Lottery */ = {
+			isa = PBXGroup;
+			children = (
+				B0ACAF9D1A036F4500709F9B /* Controller */,
+			);
+			path = Lottery;
+			sourceTree = "<group>";
+		};
+		B0ACAF9D1A036F4500709F9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0ACAF9E1A036FDC00709F9B /* KLLotteryViewController.h */,
+				B0ACAF9F1A036FDC00709F9B /* KLLotteryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1162,12 +1292,15 @@
 				B0A76AA019FCC5E000850748 /* Images.xcassets in Resources */,
 				B05CFA1319FE777000742155 /* ProvincesAndCities.plist in Resources */,
 				B0385A641A01150E00F51EF7 /* TopHeaderViewCell.xib in Resources */,
+				B01C34FE1A04D35A00B7082B /* Orders.plist in Resources */,
 				B0385A681A01150E00F51EF7 /* WeatherViewController.xib in Resources */,
 				B09ED6D219FF7DF1009CA841 /* MJRefresh.bundle in Resources */,
+				B01C34FD1A04D35A00B7082B /* Cities.plist in Resources */,
 				B0241B0F19FFCBBA00D94F3E /* AboutViewController.xib in Resources */,
 				B09ED61119FF7DA8009CA841 /* MBProgressHUD.bundle in Resources */,
 				B0385A5D1A01150E00F51EF7 /* HeaderViewCell.xib in Resources */,
 				B0385A6E1A01150E00F51EF7 /* SimpleWeatherView.xib in Resources */,
+				B01C34FC1A04D35A00B7082B /* Categories.plist in Resources */,
 				B0845B521A020EDB00776F30 /* Currency.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1186,17 +1319,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0ACAF9B1A0358F700709F9B /* RevenueController.m in Sources */,
 				B05CFA3419FE7D3F00742155 /* NSObject+MJCoding.m in Sources */,
+				B01C34EB1A04C81C00B7082B /* KLCitiesViewController.m in Sources */,
 				B0A76ACB19FCCA0500850748 /* NSDate+WB.m in Sources */,
-				B0A76A9B19FCC5E000850748 /* ViewController.m in Sources */,
 				B09ED67C19FF7DD3009CA841 /* RETableViewOptionCell.m in Sources */,
 				B09ED6E219FF7DF1009CA841 /* SDWebImagePrefetcher.m in Sources */,
 				B05CFA3519FE7D3F00742155 /* NSObject+MJKeyValue.m in Sources */,
 				B080E59C1A026B3400C819A4 /* MultilineTextCell.m in Sources */,
 				B05CF9EB19FE3ED200742155 /* KLHttpTool.m in Sources */,
 				B05CFA0319FE3F3100742155 /* AFHTTPSessionManager.m in Sources */,
+				B080E5AC1A028ADA00C819A4 /* FangResultViewController.m in Sources */,
 				B09ED68119FF7DD3009CA841 /* RECreditCardItem.m in Sources */,
 				B09ED68819FF7DD3009CA841 /* RENumberItem.m in Sources */,
+				B0ACAFA01A036FDC00709F9B /* KLLotteryViewController.m in Sources */,
 				B09ED69E19FF7DD4009CA841 /* REURLValidator.m in Sources */,
 				B03C533019FCCDDB00647439 /* WBTabBar.m in Sources */,
 				B09ED61219FF7DA8009CA841 /* MBProgressHUD.m in Sources */,
@@ -1219,6 +1355,7 @@
 				B05CFA0719FE3F3100742155 /* AFURLRequestSerialization.m in Sources */,
 				B05CFA0619FE3F3100742155 /* AFURLConnectionOperation.m in Sources */,
 				B05CFA2C19FE7D3F00742155 /* MJArgument.m in Sources */,
+				B01C35021A04D87900B7082B /* KLCityDataTool.m in Sources */,
 				B09ED67219FF7DD3009CA841 /* NSString+RENumberFormat.m in Sources */,
 				B09ED6E519FF7DF1009CA841 /* UIImage+MultiFormat.m in Sources */,
 				B09ED69219FF7DD3009CA841 /* RETableViewCellStyle.m in Sources */,
@@ -1228,10 +1365,12 @@
 				B09ED68919FF7DD3009CA841 /* REPickerItem.m in Sources */,
 				B09ED61019FF7DA8009CA841 /* MBProgressHUD+MJ.m in Sources */,
 				B09ED69C19FF7DD4009CA841 /* RELengthValidator.m in Sources */,
+				B01C34F21A04D0B400B7082B /* KLCItyDistrict.m in Sources */,
 				B09ED68C19FF7DD3009CA841 /* RETextItem.m in Sources */,
 				B05CFA3619FE7D3F00742155 /* NSObject+MJMember.m in Sources */,
 				B0385A621A01150E00F51EF7 /* ProductSection.m in Sources */,
 				B09ED69819FF7DD4009CA841 /* NSError+REValidation.m in Sources */,
+				B01C34E81A04BD9F00B7082B /* KLGroupBuyController.m in Sources */,
 				B09ED68E19FF7DD3009CA841 /* REActionBar.m in Sources */,
 				B0420BFA1A013E8A00D3A363 /* WBSubtitleCell.m in Sources */,
 				B03C533219FCCDDB00647439 /* WBBadgeButton.m in Sources */,
@@ -1240,6 +1379,7 @@
 				B09ED68219FF7DD3009CA841 /* REDateTimeItem.m in Sources */,
 				B09ED68D19FF7DD3009CA841 /* NSString+RETableViewManagerAdditions.m in Sources */,
 				B05CFA2E19FE7D3F00742155 /* MJFoundation.m in Sources */,
+				B080E5AA1A028ADA00C819A4 /* ExpendTableView.m in Sources */,
 				B0A76A9819FCC5E000850748 /* AppDelegate.m in Sources */,
 				B0385A691A01150E00F51EF7 /* KLWeatherInfo.m in Sources */,
 				B0385A5C1A01150E00F51EF7 /* HeaderViewCell.m in Sources */,
@@ -1247,11 +1387,13 @@
 				B09ED69919FF7DD4009CA841 /* REValidation.m in Sources */,
 				B09ED67519FF7DD3009CA841 /* RETableViewCreditCardCell.m in Sources */,
 				B05CFA2D19FE7D3F00742155 /* MJConst.m in Sources */,
+				B01C34F81A04D1B200B7082B /* KLCitySection.m in Sources */,
 				B09ED6D519FF7DF1009CA841 /* MJRefreshFooterView.m in Sources */,
 				B09ED6D419FF7DF1009CA841 /* MJRefreshConst.m in Sources */,
 				B09ED68419FF7DD3009CA841 /* REInlineDatePickerItem.m in Sources */,
 				B09ED69D19FF7DD4009CA841 /* REPresenceValidator.m in Sources */,
 				B09ED69A19FF7DD4009CA841 /* REValidator.m in Sources */,
+				B080E5AB1A028ADA00C819A4 /* FangDaiViewController.m in Sources */,
 				B09ED68619FF7DD3009CA841 /* RELongTextItem.m in Sources */,
 				B0A76ACA19FCCA0500850748 /* UIBarButtonItem+WB.m in Sources */,
 				B09ED67E19FF7DD3009CA841 /* RETableViewSegmentedCell.m in Sources */,
@@ -1269,6 +1411,7 @@
 				B09ED6E419FF7DF1009CA841 /* UIImage+GIF.m in Sources */,
 				B09ED6DB19FF7DF1009CA841 /* NSData+ImageContentType.m in Sources */,
 				B09ED6DF19FF7DF1009CA841 /* SDWebImageDownloader.m in Sources */,
+				B01C34EF1A04D06A00B7082B /* KLBaseCity.m in Sources */,
 				B05CFA0519FE3F3100742155 /* AFSecurityPolicy.m in Sources */,
 				B080E5991A0261EB00C819A4 /* DreamAnalysisController.m in Sources */,
 				B0A76A9519FCC5E000850748 /* main.m in Sources */,
@@ -1295,6 +1438,7 @@
 				B09ED69319FF7DD3009CA841 /* RETableViewItem.m in Sources */,
 				B09ED67D19FF7DD3009CA841 /* RETableViewPickerCell.m in Sources */,
 				B080E5A21A0280FC00C819A4 /* IPSearchController.m in Sources */,
+				B01C34F51A04D10800B7082B /* KLCity.m in Sources */,
 				B09ED68A19FF7DD3009CA841 /* RERadioItem.m in Sources */,
 				B0385A6D1A01150E00F51EF7 /* SimpleWeatherView.m in Sources */,
 				B0385A601A01150E00F51EF7 /* ProductCollectionController.m in Sources */,

@@ -115,4 +115,24 @@
     }];
 }
 
++ (void)getIPDataWithIP:(NSString *)IP success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    // 请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"ip"] = IP;
+    params[@"f"] = @"json";
+    
+    // 发送请求
+    [KLHttpTool getWithURL:@"http://ipapi.sinaapp.com/api.php?" params:params success:^(id json) {
+        if (success) {
+            success(json);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+            NSLog(@"%@",error);
+        }
+    }];
+}
+
 @end

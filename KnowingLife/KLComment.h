@@ -29,5 +29,9 @@
 #define KLLog(...)
 #endif
 
+// 通知
+// 城市改变的通知
+#define kCityChangeNote @"city_change"
+
 
 #endif
