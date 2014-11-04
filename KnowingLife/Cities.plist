@@ -7593,16 +7593,6 @@
 				<array>
 					<dict>
 						<key>name</key>
-						<string>近郊</string>
-						<key>neighborhoods</key>
-						<array>
-							<string>浏阳市</string>
-							<string>宁乡县</string>
-							<string>望城区</string>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>芙蓉区</string>
 						<key>neighborhoods</key>
 						<array>

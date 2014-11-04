@@ -19,6 +19,7 @@
 #import "KLDealViewCell.h"
 #import "MJRefresh.h"
 #import "UIBarButtonItem+WB.h"
+#import "KLDetailDealController.h"
 
 @interface KLTGDealListController ()<DOPDropDownMenuDataSource, DOPDropDownMenuDelegate, UITableViewDataSource, UITableViewDelegate>
 // 分类
@@ -165,7 +166,18 @@ static NSString *reuseIdDealCell = @"DealCell";
     self.tableView = tableView;
 }
 
-// 获得新团购数据
+// 添加上下拉刷新
+- (void)addRefreshView
+{
+    // 下拉刷新
+    [self.tableView addHeaderWithTarget:self action:@selector(getNewTGDetailData)];
+    
+    // 上拉刷新
+    [self.tableView addFooterWithTarget:self action:@selector(getMoreTGDetailData)];
+    
+}
+
+#pragma mark 获得新团购数据
 - (void)getNewTGDetailData
 {
     if (!self.currentDistrict || [self.currentDistrict isEqualToString:@"全城"]) {
@@ -206,7 +218,7 @@ static NSString *reuseIdDealCell = @"DealCell";
     
 }
 
-// 获得更多团购数据
+#pragma mark 获得更多团购数据
 - (void)getMoreTGDetailData
 {
     if (!self.currentDistrict || [self.currentDistrict isEqualToString:@"全城"]) {
@@ -245,16 +257,6 @@ static NSString *reuseIdDealCell = @"DealCell";
     }];
 }
 
-// 添加上下拉刷新
-- (void)addRefreshView
-{
-    // 下拉刷新
-    [self.tableView addHeaderWithTarget:self action:@selector(getNewTGDetailData)];
-    
-    // 上拉刷新
-    [self.tableView addFooterWithTarget:self action:@selector(getMoreTGDetailData)];
-    
-}
 
 #pragma mark DOPDropDownMenuDataSource
 
@@ -353,12 +355,15 @@ static NSString *reuseIdDealCell = @"DealCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     KLDeal *deal = self.deals[indexPath.row];
+    KLDetailDealController *detailDealCrl = [[KLDetailDealController alloc]init];
+    detailDealCrl.deal = deal;
+    [self.navigationController pushViewController:detailDealCrl animated:YES];
     
-    [[KLTGHttpTool sharedKLTGHttpTool] dealWithID:deal.deal_id success:^(KLDeal *deal) {
-        KLLog(@"%@",deal);
-    } error:^(NSError *error) {
-        KLLog(@"%@",error);
-    }];
+//    [[KLTGHttpTool sharedKLTGHttpTool] dealWithID:deal.deal_id success:^(KLDeal *deal) {
+//        KLLog(@"%@",deal);
+//    } error:^(NSError *error) {
+//        KLLog(@"%@",error);
+//    }];
 }
 
 - (void)dealloc

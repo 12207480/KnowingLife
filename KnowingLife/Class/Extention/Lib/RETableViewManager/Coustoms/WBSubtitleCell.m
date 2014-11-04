@@ -15,7 +15,8 @@
 
 + (CGFloat)heightWithItem:(NSObject *)item tableViewManager:(RETableViewManager *)tableViewManager
 {
-    return 36;
+    CGFloat CellHeight = ((WBSubtitleItem *)item).cellHeight;
+    return CellHeight > 0 ? CellHeight : 36;
 }
 
 - (void)cellDidLoad

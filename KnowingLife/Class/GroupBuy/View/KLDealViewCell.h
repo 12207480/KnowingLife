@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class KLDeal;
+@class KLDeal, KLLineLabel;
 @interface KLDealViewCell : UITableViewCell
 // 图片
 @property (weak, nonatomic) IBOutlet UIImageView *image;
@@ -21,6 +21,8 @@
 // 销售
 @property (weak, nonatomic) IBOutlet UILabel *buycountLable;
 @property (weak, nonatomic) IBOutlet UILabel *yuanLable;
+// 原价
+@property (weak, nonatomic) IBOutlet KLLineLabel *originalPriceLable;
 
 // 数据
 @property (nonatomic, strong) KLDeal *deal;

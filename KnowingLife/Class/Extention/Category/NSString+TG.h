@@ -10,4 +10,6 @@
 
 @interface NSString (NSString_TG)
 + (NSString *)stringWithDouble:(double)value fractionCount:(int)fractionCount;
+
+- (CGSize)textSizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode;
 @end

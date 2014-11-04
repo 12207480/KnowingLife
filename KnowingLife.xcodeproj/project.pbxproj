@@ -171,6 +171,12 @@
 		B0845B4E1A01F52F00776F30 /* PhoneSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0845B4D1A01F52F00776F30 /* PhoneSearchController.m */; };
 		B0845B521A020EDB00776F30 /* Currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0845B511A020EDB00776F30 /* Currency.plist */; };
 		B0845B551A02131F00776F30 /* CurrencySearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0845B541A02131F00776F30 /* CurrencySearchController.m */; };
+		B0923A361A090221007F1134 /* KLLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0923A351A090221007F1134 /* KLLineLabel.m */; };
+		B0923A391A090F00007F1134 /* KLImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0923A381A090F00007F1134 /* KLImageCell.m */; };
+		B0923A3C1A090F14007F1134 /* KLImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0923A3B1A090F14007F1134 /* KLImageItem.m */; };
+		B0923A3F1A091031007F1134 /* KLDetailDealController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0923A3E1A091031007F1134 /* KLDetailDealController.m */; };
+		B0923A421A091A7A007F1134 /* KLBuyDock.m in Sources */ = {isa = PBXBuildFile; fileRef = B0923A411A091A7A007F1134 /* KLBuyDock.m */; };
+		B0923A441A091AED007F1134 /* KLBuyDock.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0923A431A091AED007F1134 /* KLBuyDock.xib */; };
 		B09ED6EC19FF8D5D009CA841 /* KLMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09ED6EB19FF8D5D009CA841 /* KLMoreViewController.m */; };
 		B0A76A9519FCC5E000850748 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76A9419FCC5E000850748 /* main.m */; };
 		B0A76A9819FCC5E000850748 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A76A9719FCC5E000850748 /* AppDelegate.m */; };
@@ -519,6 +525,17 @@
 		B0845B511A020EDB00776F30 /* Currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currency.plist; sourceTree = "<group>"; };
 		B0845B531A02131F00776F30 /* CurrencySearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencySearchController.h; sourceTree = "<group>"; };
 		B0845B541A02131F00776F30 /* CurrencySearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencySearchController.m; sourceTree = "<group>"; };
+		B0923A341A090221007F1134 /* KLLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLLineLabel.h; sourceTree = "<group>"; };
+		B0923A351A090221007F1134 /* KLLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLLineLabel.m; sourceTree = "<group>"; };
+		B0923A371A090F00007F1134 /* KLImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLImageCell.h; sourceTree = "<group>"; };
+		B0923A381A090F00007F1134 /* KLImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLImageCell.m; sourceTree = "<group>"; };
+		B0923A3A1A090F14007F1134 /* KLImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLImageItem.h; sourceTree = "<group>"; };
+		B0923A3B1A090F14007F1134 /* KLImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLImageItem.m; sourceTree = "<group>"; };
+		B0923A3D1A091031007F1134 /* KLDetailDealController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDetailDealController.h; sourceTree = "<group>"; };
+		B0923A3E1A091031007F1134 /* KLDetailDealController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDetailDealController.m; sourceTree = "<group>"; };
+		B0923A401A091A7A007F1134 /* KLBuyDock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBuyDock.h; sourceTree = "<group>"; };
+		B0923A411A091A7A007F1134 /* KLBuyDock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBuyDock.m; sourceTree = "<group>"; };
+		B0923A431A091AED007F1134 /* KLBuyDock.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLBuyDock.xib; sourceTree = "<group>"; };
 		B09ED6EA19FF8D5D009CA841 /* KLMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMoreViewController.h; sourceTree = "<group>"; };
 		B09ED6EB19FF8D5D009CA841 /* KLMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMoreViewController.m; sourceTree = "<group>"; };
 		B0A76A8F19FCC5E000850748 /* KnowingLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowingLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -599,6 +616,8 @@
 				B01C35071A04EC3F00B7082B /* KLSearchController.m */,
 				B0D50DE01A07552F006CBA2F /* KLTGDealListController.h */,
 				B0D50DE11A07552F006CBA2F /* KLTGDealListController.m */,
+				B0923A3D1A091031007F1134 /* KLDetailDealController.h */,
+				B0923A3E1A091031007F1134 /* KLDetailDealController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -612,6 +631,8 @@
 				B0B6440D1A08F4090089F596 /* KLRestriction.m */,
 				B03343171A07A09C00B10032 /* KLDeal.h */,
 				B03343181A07A09C00B10032 /* KLDeal.m */,
+				B0923A3A1A090F14007F1134 /* KLImageItem.h */,
+				B0923A3B1A090F14007F1134 /* KLImageItem.m */,
 				B0D50DAD1A070E57006CBA2F /* Menu */,
 				B0D50DAC1A070E39006CBA2F /* City */,
 			);
@@ -628,6 +649,13 @@
 				B033431D1A07B6AA00B10032 /* KLDealViewCell.h */,
 				B033431E1A07B6AA00B10032 /* KLDealViewCell.m */,
 				B033431F1A07B6AA00B10032 /* KLDealViewCell.xib */,
+				B0923A371A090F00007F1134 /* KLImageCell.h */,
+				B0923A381A090F00007F1134 /* KLImageCell.m */,
+				B0923A341A090221007F1134 /* KLLineLabel.h */,
+				B0923A351A090221007F1134 /* KLLineLabel.m */,
+				B0923A401A091A7A007F1134 /* KLBuyDock.h */,
+				B0923A411A091A7A007F1134 /* KLBuyDock.m */,
+				B0923A431A091AED007F1134 /* KLBuyDock.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -845,8 +873,8 @@
 		B03342151A075AD600B10032 /* RETableViewManager */ = {
 			isa = PBXGroup;
 			children = (
-				B03342161A075AD600B10032 /* Cells */,
 				B033422F1A075AD600B10032 /* Coustoms */,
+				B03342161A075AD600B10032 /* Cells */,
 				B03342381A075AD600B10032 /* Items */,
 				B03342531A075AD700B10032 /* NSString+RETableViewManagerAdditions.h */,
 				B03342541A075AD700B10032 /* NSString+RETableViewManagerAdditions.m */,
@@ -1470,6 +1498,7 @@
 				B0385A681A01150E00F51EF7 /* WeatherViewController.xib in Resources */,
 				B01C34FD1A04D35A00B7082B /* Cities.plist in Resources */,
 				B03342C11A075AD700B10032 /* unicode_to_hanyu_pinyin.txt in Resources */,
+				B0923A441A091AED007F1134 /* KLBuyDock.xib in Resources */,
 				B0241B0F19FFCBBA00D94F3E /* AboutViewController.xib in Resources */,
 				B0385A5D1A01150E00F51EF7 /* HeaderViewCell.xib in Resources */,
 				B03343231A07D71100B10032 /* Categories.plist in Resources */,
@@ -1504,6 +1533,7 @@
 				B03342CF1A075AD700B10032 /* RETableViewLongTextCell.m in Sources */,
 				B03342F41A075AD700B10032 /* REEmailValidator.m in Sources */,
 				B03343201A07B6AA00B10032 /* KLDealViewCell.m in Sources */,
+				B0923A361A090221007F1134 /* KLLineLabel.m in Sources */,
 				B01C34EB1A04C81C00B7082B /* KLCitiesViewController.m in Sources */,
 				B03342F01A075AD700B10032 /* RETableViewSection.m in Sources */,
 				B03342DE1A075AD700B10032 /* REInlinePickerItem.m in Sources */,
@@ -1520,7 +1550,9 @@
 				B03342EA1A075AD700B10032 /* RETableViewCell.m in Sources */,
 				B05CF9EB19FE3ED200742155 /* KLHttpTool.m in Sources */,
 				B080E5AC1A028ADA00C819A4 /* FangResultViewController.m in Sources */,
+				B0923A391A090F00007F1134 /* KLImageCell.m in Sources */,
 				B03342A01A075AD700B10032 /* AFURLRequestSerialization.m in Sources */,
+				B0923A3F1A091031007F1134 /* KLDetailDealController.m in Sources */,
 				B0ACAFA01A036FDC00709F9B /* KLLotteryViewController.m in Sources */,
 				B03C533019FCCDDB00647439 /* WBTabBar.m in Sources */,
 				B03342AC1A075AD700B10032 /* MJIvar.m in Sources */,
@@ -1533,6 +1565,7 @@
 				B03342E31A075AD700B10032 /* RERadioItem.m in Sources */,
 				B0385A651A01150E00F51EF7 /* CitysViewController.m in Sources */,
 				B0D50DDF1A073813006CBA2F /* KLMenuView.m in Sources */,
+				B0923A3C1A090F14007F1134 /* KLImageItem.m in Sources */,
 				B03342F81A075AD700B10032 /* MKAnnotationView+WebCache.m in Sources */,
 				B03342DD1A075AD700B10032 /* REInlineDatePickerItem.m in Sources */,
 				B03342E01A075AD700B10032 /* REMultipleChoiceItem.m in Sources */,
@@ -1602,6 +1635,7 @@
 				B03342E71A075AD700B10032 /* REActionBar.m in Sources */,
 				B03342A31A075AD700B10032 /* CSStickyHeaderFlowLayout.m in Sources */,
 				B0845B551A02131F00776F30 /* CurrencySearchController.m in Sources */,
+				B0923A421A091A7A007F1134 /* KLBuyDock.m in Sources */,
 				B0241B0E19FFCBBA00D94F3E /* AboutViewController.m in Sources */,
 				B03342EF1A075AD700B10032 /* RETableViewOptionsController.m in Sources */,
 				B03342D01A075AD700B10032 /* RETableViewNumberCell.m in Sources */,
