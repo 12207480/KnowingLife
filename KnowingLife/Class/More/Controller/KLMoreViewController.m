@@ -58,7 +58,8 @@
     // 创建一个组
     RETableViewSection *section = [RETableViewSection section];
     [self.manager addSection:section];
-    section.headerHeight = SectionHeaderHeight/2;
+    section.headerTitle = @"检查更新";
+    section.headerHeight = SectionHeaderHeight;
     section.footerHeight = SectionFooterHeight;
     
     __typeof (self) __weak selfVc = self;
