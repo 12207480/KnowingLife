@@ -6993,6 +6993,21 @@
 				<key>name</key>
 				<string>宣城</string>
 			</dict>
+			<dict>
+				<key>districts</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>雨湖区</string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>岳塘区</string>
+					</dict>
+				</array>
+				<key>name</key>
+				<string>湘潭</string>
+			</dict>
 		</array>
 		<key>name</key>
 		<string>X</string>

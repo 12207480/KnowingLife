@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    NSLog(@"%@",self.weatherInfo);
+    //NSLog(@"%@",self.weatherInfo);
     // 创建RETableViewManager管理类
     self.manager = [[RETableViewManager alloc]initWithTableView:self.tableView delegate:self];
     self.manager.style.cellHeight = 36;

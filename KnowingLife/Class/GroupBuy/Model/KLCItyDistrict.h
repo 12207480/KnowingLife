@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 tany. All rights reserved.
 //
 
-#import "KLBaseCity.h"
+#import "KLBaseModel.h"
 
-@interface KLCItyDistrict : KLBaseCity
+@interface KLCItyDistrict : KLBaseModel
 // 街道
 @property (nonatomic, strong) NSArray *neighborhoods;
 @end

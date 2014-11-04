@@ -80,6 +80,7 @@
         
         // 1.取出属性值
         NSString *key = [self keyWithPropertyName:ivar.propertyName];
+        
         id value = keyValues[key];
         if (!value || [value isKindOfClass:[NSNull class]]) return;
         

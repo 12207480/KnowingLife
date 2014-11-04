@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "KLTableBarController.h"
+#import "SDWebImageManager.h"
 
 @interface AppDelegate ()
 
@@ -49,5 +50,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+// 收到内存警告
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    // 停止下载图片
+    [[SDWebImageManager sharedManager] cancelAll];
+    
+    // 清除内存缓存图片
+    [[SDWebImageManager sharedManager].imageCache clearMemory];
+}
+
 
 @end

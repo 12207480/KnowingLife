@@ -15,6 +15,9 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SimpleWeatherView" owner:self options:nil];
     SimpleWeatherView *weatherView = [nib objectAtIndex:0];
     return weatherView;
+    
+    // 简单写法
+    // return [[NSBundle mainBundle] loadNibNamed:@"SimpleWeatherView" owner:self options:nil][0];
 }
 
 /*

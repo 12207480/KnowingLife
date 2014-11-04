@@ -7,15 +7,21 @@
 //
 
 #import "KLCitiesViewController.h"
-#import "KLCityDataTool.h"
+#import "KLMetaDataTool.h"
 #import "KLCitySection.h"
 #import "KLCity.h"
+#import "KLCoverView.h"
+#import "KLSearchController.h"
 
 @interface KLCitiesViewController ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, weak) UISearchBar *searchBar;
 @property (nonatomic, weak) UITableView *tableView;
+// cover遮罩View
+@property (nonatomic, strong) KLCoverView *coverView;
+@property (nonatomic, strong) KLSearchController *searchResult;
 
 @property (nonatomic, strong) NSMutableArray *citySections;
+
 @end
 
 #define kSearchH 36
@@ -65,15 +71,75 @@
 {
     self.citySections = [NSMutableArray array];
     
-    [self.citySections addObjectsFromArray:[KLCityDataTool sharedKLCityDataTool].totalCitySections];
+    [self.citySections addObjectsFromArray:[KLMetaDataTool sharedKLMetaDataTool].totalCitySections];
     
 }
 
 #pragma mark - 搜索框代理方法
 #pragma mark 监听搜索框的文字改变
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if (searchText.length == 0) {
+        // 隐藏搜索界面
+        [_searchResult.view removeFromSuperview];
+    } else {
+        // 显示搜索界面
+        if (_searchResult == nil) {
+            _searchResult = [[KLSearchController alloc] init];
+            _searchResult.view.frame = self.coverView.frame;
+            _searchResult.view.autoresizingMask = self.coverView.autoresizingMask;
+            [self addChildViewController:_searchResult];
+        }
+        _searchResult.searchText = searchText;
+        [self.view addSubview:_searchResult.view];
+    }
+}
+
+// 点击取消
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self coverClicked];
+}
+
+// searchBar结束焦点
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
 {
+    [self coverClicked];
+}
+
+#pragma 搜索框聚焦
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    // 显示取消按钮
+    [searchBar setShowsCancelButton:YES animated:YES];
     
+    if (self.coverView == nil) {
+        self.coverView = [KLCoverView coverWithTarget:self action:@selector(coverClicked)];
+    }
+    
+    self.coverView.frame = self.tableView.frame;
+    self.coverView.alpha = 0.0;
+    [self.view addSubview:self.coverView];
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.coverView reset];
+    }];
+}
+
+// cover遮罩点击
+- (void)coverClicked
+{
+    // 移除遮罩
+    [UIView animateWithDuration:0.3 animations:^{
+        self.coverView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [self.coverView removeFromSuperview];
+    }];
+    
+    // 取消按钮消失
+    [self.searchBar setShowsCancelButton:NO animated:YES];
+    
+    // 键盘消失
+    [self.searchBar resignFirstResponder];
 }
 
 #pragma mark - tableView数据源方法
@@ -120,7 +186,7 @@
     KLCitySection *section = self.citySections[indexPath.section];
     KLCity *city = section.cities[indexPath.row];
     
-    [KLCityDataTool sharedKLCityDataTool].currentCity = city;
+    [KLMetaDataTool sharedKLMetaDataTool].currentCity = city;
     
     [self.navigationController popViewControllerAnimated:YES];
 }

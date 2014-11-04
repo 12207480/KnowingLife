@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KLGroupBuyController : UITableViewController
+@interface KLGroupBuyController : UICollectionViewController
 
 @end

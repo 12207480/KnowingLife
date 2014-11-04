@@ -86,17 +86,17 @@
     [self addChildViewControl:life title:@"生活" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
     self.life = life;
     
-    // 消息控制器
+    // 新闻控制器
     KLNewsViewController *news = [[KLNewsViewController alloc]init];
     //msg.tabBarItem.badgeValue = @"30";
     [self addChildViewControl:news title:@"新闻" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
     
-    // 广场控制器
+    // 团购控制器
     KLGroupBuyController *discover = [[KLGroupBuyController alloc]init];
     //discover.tabBarItem.badgeValue = @"60";
     [self addChildViewControl:discover title:@"团购" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
     
-    // 我控制器
+    // 更多控制器
     KLMoreViewController *more = [[KLMoreViewController alloc]init];
     //me.tabBarItem.badgeValue = @"80";
     [self addChildViewControl:more title:@"更多" imageName:@"tabbar_more" selectedImageName:@"tabbar_more_selected"];

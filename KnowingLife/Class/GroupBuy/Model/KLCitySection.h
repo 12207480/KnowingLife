@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 tany. All rights reserved.
 //
 
-#import "KLBaseCity.h"
+#import "KLBaseModel.h"
 
-@interface KLCitySection : KLBaseCity
+@interface KLCitySection : KLBaseModel
 // 所有的城市
 @property (nonatomic, strong) NSMutableArray *cities;
 @end

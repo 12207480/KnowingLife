@@ -11,6 +11,7 @@
 #import "RETableViewOptionsController.h"
 #import "MBProgressHUD+MJ.h"
 #import "KLSearchHttpTool.h"
+#import "NSString+TG.h"
 
 @interface CurrencySearchController ()
 @property (nonatomic, strong) RETableViewManager *manager;
@@ -144,9 +145,9 @@
             
             // to货币
             double toNumber = [weakSelf.numberItem.value doubleValue] * [dic[@"now"] doubleValue];
-            NSString *money = [NSString stringWithFormat:@"%.4f",toNumber];
+            //NSString *money = [NSString stringWithFormat:@"%.4f",toNumber];[weakSelf changeFloat:money]
             
-            [weakSelf.resultSection addItem:[WBSubtitleItem itemWithTitle:dic[@"to_cn"] rightSubtitle:[weakSelf changeFloat:money]]];
+            [weakSelf.resultSection addItem:[WBSubtitleItem itemWithTitle:dic[@"to_cn"] rightSubtitle:[NSString stringWithDouble:toNumber fractionCount:3]]];
             
             // 当前汇率更新日期
             [weakSelf.resultSection addItem:[WBSubtitleItem itemWithTitle:@"汇率更新日期" rightSubtitle:dic[@"date"]]];

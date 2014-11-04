@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 tany. All rights reserved.
 //
 
-#import "KLBaseCity.h"
+#import "KLBaseModel.h"
 
-@interface KLCity : KLBaseCity
+@interface KLCity : KLBaseModel
 // 分区
 @property (nonatomic, strong) NSArray *districts;
 // 热门
