@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 tany. All rights reserved.
 //
 
-#import "KLTGDetailController.h"
+#import "KLTGDealListController.h"
 #import "DOPDropDownMenu.h"
 #import "KLCategory.h"
 #import "KLMetaDataTool.h"
@@ -20,7 +20,7 @@
 #import "MJRefresh.h"
 #import "UIBarButtonItem+WB.h"
 
-@interface KLTGDetailController ()<DOPDropDownMenuDataSource, DOPDropDownMenuDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface KLTGDealListController ()<DOPDropDownMenuDataSource, DOPDropDownMenuDelegate, UITableViewDataSource, UITableViewDelegate>
 // 分类
 @property (nonatomic, strong) NSArray *subcategories;
 // 地区
@@ -31,6 +31,13 @@
 @property (nonatomic, weak) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *deals;
+
+// 当前选中的类别
+@property (nonatomic, strong) NSString *currentSubcategorie;
+// 当前选中的区域
+@property (nonatomic, strong) NSString *currentDistrict;
+// 当前选中的排序
+@property (nonatomic, strong) KLOrder *currentOrder;
 
 @property (nonatomic, assign) int page;
 @end
@@ -46,7 +53,7 @@ typedef enum : NSUInteger {
 
 static NSString *reuseIdDealCell = @"DealCell";
 
-@implementation KLTGDetailController
+@implementation KLTGDealListController
 
 - (NSMutableArray *)deals
 {
@@ -119,11 +126,12 @@ static NSString *reuseIdDealCell = @"DealCell";
     if ([[KLMetaDataTool sharedKLMetaDataTool].currentCategory.category_name isEqualToString: @"结婚"]) {
         [tmp removeObjectAtIndex:0];
         KLSubCategorie *subCategorie = tmp[0];
-        [KLMetaDataTool sharedKLMetaDataTool].currentSubcategorie = subCategorie.category_name;
+        self.currentSubcategorie = subCategorie.category_name;
     } else {
-        [KLMetaDataTool sharedKLMetaDataTool].currentSubcategorie = nil;
+        self.currentSubcategorie = nil;
     }
     
+    // 保存全部地区
     KLCItyDistrict *distrc = [[KLCItyDistrict alloc]init];
     distrc.name = @"全城";
     if ([KLMetaDataTool sharedKLMetaDataTool].currentCity.districts == nil) {
@@ -135,6 +143,7 @@ static NSString *reuseIdDealCell = @"DealCell";
     }
     self.districs = tmp;
     
+    // 保存排序
     self.orders = [KLMetaDataTool sharedKLMetaDataTool].totalOrders;
 }
 
@@ -156,35 +165,29 @@ static NSString *reuseIdDealCell = @"DealCell";
     self.tableView = tableView;
 }
 
-- (void)getTGDetailData
+// 获得新团购数据
+- (void)getNewTGDetailData
 {
-    [[KLTGHttpTool sharedKLTGHttpTool] dealsWithPage:1 success:^(NSArray *deals, int totalCount) {
-        NSLog(@"%@,%d",deals,totalCount);
-        [self.deals addObjectsFromArray:deals];
-        [self.tableView reloadData];
-    } error:^(NSError *error) {
-    }];
-}
-
-// 添加上下拉刷新
-- (void)addRefreshView
-{
-    // 下拉刷新
-    [self.tableView addHeaderWithTarget:self action:@selector(headerRereshing)];
+    if (!self.currentDistrict || [self.currentDistrict isEqualToString:@"全城"]) {
+        self.currentDistrict = nil;
+    }
     
-    // 上拉刷新
-    [self.tableView addFooterWithTarget:self action:@selector(footerRereshing)];
+    if (!self.currentSubcategorie || [self.currentSubcategorie isEqualToString:@"全部"]) {
+        self.currentSubcategorie = [KLMetaDataTool sharedKLMetaDataTool].currentCategory.category_name;
+    }
     
-}
-
-// 上拉刷新新数据
-- (void)headerRereshing
-{
-    _page = 1;
+    NSInteger orderIndex = 1;
+    if (self.currentOrder ) {
+        orderIndex = self.currentOrder.index;
+    }
     
     __typeof (self) __weak weakSelf = self;
+    
+    // 页面为1最新一页
+    _page = 1;
+    
     // 发送请求
-    [[KLTGHttpTool sharedKLTGHttpTool] dealsWithPage:_page success:^(NSArray *deals, int totalCount) {
+    [[KLTGHttpTool sharedKLTGHttpTool] dealsWithPage:_page district:self.currentDistrict category:self.currentSubcategorie orderIndext:orderIndex success:^(NSArray *deals, int totalCount) {
         //KLLog(@"%@,%d",deals,totalCount);
         
         // 添加数据
@@ -199,16 +202,33 @@ static NSString *reuseIdDealCell = @"DealCell";
         // 停止刷新
         [weakSelf.tableView headerEndRefreshing];
     }];
+
+    
 }
 
-// 下拉刷新数据
-- (void)footerRereshing
+// 获得更多团购数据
+- (void)getMoreTGDetailData
 {
+    if (!self.currentDistrict || [self.currentDistrict isEqualToString:@"全城"]) {
+        self.currentDistrict = nil;
+    }
+    
+    if (!self.currentSubcategorie || [self.currentSubcategorie isEqualToString:@"全部"]) {
+        self.currentSubcategorie = [KLMetaDataTool sharedKLMetaDataTool].currentCategory.category_name;
+    }
+    
+    NSInteger orderIndex = 1;
+    if (self.currentOrder ) {
+        orderIndex = self.currentOrder.index;
+    }
+    
+    __typeof (self) __weak weakSelf = self;
+    
     // 加载页面+1
     ++_page;
-    __typeof (self) __weak weakSelf = self;
+    
     // 发送请求
-    [[KLTGHttpTool sharedKLTGHttpTool] dealsWithPage:_page success:^(NSArray *deals, int totalCount) {
+    [[KLTGHttpTool sharedKLTGHttpTool] dealsWithPage:_page district:self.currentDistrict category:self.currentSubcategorie orderIndext:orderIndex success:^(NSArray *deals, int totalCount) {
         //KLLog(@"%@,%d",deals,totalCount);
         
         // 添加数据
@@ -223,6 +243,17 @@ static NSString *reuseIdDealCell = @"DealCell";
         // 停止刷新
         [weakSelf.tableView headerEndRefreshing];
     }];
+}
+
+// 添加上下拉刷新
+- (void)addRefreshView
+{
+    // 下拉刷新
+    [self.tableView addHeaderWithTarget:self action:@selector(getNewTGDetailData)];
+    
+    // 上拉刷新
+    [self.tableView addFooterWithTarget:self action:@selector(getMoreTGDetailData)];
+    
 }
 
 #pragma mark DOPDropDownMenuDataSource
@@ -274,18 +305,18 @@ static NSString *reuseIdDealCell = @"DealCell";
     if (indexPath.column == kCategorys) {
         // 记录当前分类
         KLSubCategorie *subCategorie = self.subcategories[indexPath.row];
-        [KLMetaDataTool sharedKLMetaDataTool].currentSubcategorie= subCategorie.category_name;
+        self.currentSubcategorie= subCategorie.category_name;
     } else if (indexPath.column == kDistrics) {
         // 记录当前分区
         KLCItyDistrict *distric = self.districs[indexPath.row];
-        [KLMetaDataTool sharedKLMetaDataTool].currentDistrict = distric.name;
+        self.currentDistrict = distric.name;
     } else if (indexPath.column == kOrders) {
         // 记录当前排序
-        [KLMetaDataTool sharedKLMetaDataTool].currentOrder =self.orders[indexPath.row];
+        self.currentOrder =self.orders[indexPath.row];
     } else {
     }
     
-    KLLog(@"%@ - %@ - %@",[KLMetaDataTool sharedKLMetaDataTool].currentSubcategorie,[KLMetaDataTool sharedKLMetaDataTool].currentDistrict,[KLMetaDataTool sharedKLMetaDataTool].currentOrder);
+    KLLog(@"%@ - %@ - %@",self.currentSubcategorie,self.currentDistrict,self.currentOrder);
     __typeof (self) __weak weakSelf = self;
     [weakSelf.tableView headerBeginRefreshing];
 }
@@ -315,6 +346,19 @@ static NSString *reuseIdDealCell = @"DealCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 90;
+}
+
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    KLDeal *deal = self.deals[indexPath.row];
+    
+    [[KLTGHttpTool sharedKLTGHttpTool] dealWithID:deal.deal_id success:^(KLDeal *deal) {
+        KLLog(@"%@",deal);
+    } error:^(NSError *error) {
+        KLLog(@"%@",error);
+    }];
 }
 
 - (void)dealloc

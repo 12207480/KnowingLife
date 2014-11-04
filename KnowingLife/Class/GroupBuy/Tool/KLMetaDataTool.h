@@ -27,12 +27,12 @@ singleton_interface(KLMetaDataTool)
 
 // 当前选中的城市
 @property (nonatomic, strong) KLCity *currentCity;
-// 当前选中的类别
-@property (nonatomic, strong) NSString *currentSubcategorie;
-// 当前选中的区域
-@property (nonatomic, strong) NSString *currentDistrict;
-// 当前选中的排序
-@property (nonatomic, strong) KLOrder *currentOrder;
+//// 当前选中的类别
+//@property (nonatomic, strong) NSString *currentSubcategorie;
+//// 当前选中的区域
+//@property (nonatomic, strong) NSString *currentDistrict;
+//// 当前选中的排序
+//@property (nonatomic, strong) KLOrder *currentOrder;
 @property (nonatomic, strong) KLCategory *currentCategory;
 
 @end

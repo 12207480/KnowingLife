@@ -19,7 +19,7 @@
 #import "ProductItem.h"
 #import "ProductSection.h"
 #import "HeaderViewCell.h"
-#import "KLTGDetailController.h"
+#import "KLTGDealListController.h"
 
 @interface KLGroupBuyController ()
 @property (nonatomic, strong) NSMutableArray *sections;
@@ -110,7 +110,7 @@ static NSString * const reuseHeaderIdentifier = @"HeaderViewCell";
     
     for (int i = 0; i < 5; ++i) {
         KLCategory *category = [KLMetaDataTool sharedKLMetaDataTool].totalCategories[i];
-        [section.items addObject:[ProductItem itemWithTitle:category.category_name icon:category.icon destVcClass:[KLTGDetailController class]]];
+        [section.items addObject:[ProductItem itemWithTitle:category.category_name icon:category.icon destVcClass:[KLTGDealListController class]]];
     }
     [self.sections addObject:section];
 }
@@ -122,7 +122,7 @@ static NSString * const reuseHeaderIdentifier = @"HeaderViewCell";
     
     for (int i = 5; i < [KLMetaDataTool sharedKLMetaDataTool].totalCategories.count; ++i) {
         KLCategory *category = [KLMetaDataTool sharedKLMetaDataTool].totalCategories[i];
-        [section.items addObject:[ProductItem itemWithTitle:category.category_name icon:category.icon destVcClass:[KLTGDetailController class]]];
+        [section.items addObject:[ProductItem itemWithTitle:category.category_name icon:category.icon destVcClass:[KLTGDealListController class]]];
     }
     [self.sections addObject:section];
 }

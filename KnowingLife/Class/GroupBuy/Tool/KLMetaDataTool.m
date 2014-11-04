@@ -75,7 +75,7 @@ singleton_implementation(KLMetaDataTool)
 #pragma mark 初始化分类数据
 - (void)loadCategoryData
 {
-    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"categories.plist" ofType:nil]];
+    NSArray *array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Categories.plist" ofType:nil]];
     
     NSMutableArray *temp = [NSMutableArray array];
     for (NSDictionary *dict in array) {
@@ -184,27 +184,5 @@ singleton_implementation(KLMetaDataTool)
         [allSections insertObject:_visitedSection atIndex:0];
     }
 }
-
-- (void)setCurrentCategory:(KLCategory *)currentCategory
-{
-    _currentCategory = currentCategory;
-    // 发出通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:kCategoryChangeNote object:nil];
-}
-
-- (void)setCurrentDistrict:(NSString *)currentDistrict
-{
-    _currentDistrict = currentDistrict;
-    // 发出通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:kDistrictChangeNote object:nil];
-}
-
-- (void)setCurrentOrder:(KLOrder *)currentOrder
-{
-    _currentOrder = currentOrder;
-    // 发出通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:kOrderChangeNote object:nil];
-}
-
 
 @end

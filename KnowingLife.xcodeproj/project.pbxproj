@@ -13,7 +13,6 @@
 		B01C34F21A04D0B400B7082B /* KLCItyDistrict.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34F11A04D0B400B7082B /* KLCItyDistrict.m */; };
 		B01C34F51A04D10800B7082B /* KLCity.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34F41A04D10800B7082B /* KLCity.m */; };
 		B01C34F81A04D1B200B7082B /* KLCitySection.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C34F71A04D1B200B7082B /* KLCitySection.m */; };
-		B01C34FC1A04D35A00B7082B /* Categoriesaaa.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01C34F91A04D35A00B7082B /* Categoriesaaa.plist */; };
 		B01C34FD1A04D35A00B7082B /* Cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01C34FA1A04D35A00B7082B /* Cities.plist */; };
 		B01C34FE1A04D35A00B7082B /* Orders.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01C34FB1A04D35A00B7082B /* Orders.plist */; };
 		B01C35021A04D87900B7082B /* KLMetaDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B01C35011A04D87900B7082B /* KLMetaDataTool.m */; };
@@ -138,7 +137,7 @@
 		B033431C1A07AFDA00B10032 /* NSString+TG.m in Sources */ = {isa = PBXBuildFile; fileRef = B033431B1A07AFDA00B10032 /* NSString+TG.m */; };
 		B03343201A07B6AA00B10032 /* KLDealViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B033431E1A07B6AA00B10032 /* KLDealViewCell.m */; };
 		B03343211A07B6AA00B10032 /* KLDealViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B033431F1A07B6AA00B10032 /* KLDealViewCell.xib */; };
-		B03343231A07D71100B10032 /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B03343221A07D71100B10032 /* categories.plist */; };
+		B03343231A07D71100B10032 /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = B03343221A07D71100B10032 /* Categories.plist */; };
 		B03343261A07D91F00B10032 /* KLBaseCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B03343251A07D91F00B10032 /* KLBaseCategory.m */; };
 		B03343291A07DAD700B10032 /* KLSubCategorie.m in Sources */ = {isa = PBXBuildFile; fileRef = B03343281A07DAD700B10032 /* KLSubCategorie.m */; };
 		B0385A5C1A01150E00F51EF7 /* HeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0385A381A01150E00F51EF7 /* HeaderViewCell.m */; };
@@ -184,10 +183,11 @@
 		B0A777DD19FF358A006F8BD5 /* KLNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A777DC19FF358A006F8BD5 /* KLNewsViewController.m */; };
 		B0ACAF9B1A0358F700709F9B /* RevenueController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACAF9A1A0358F700709F9B /* RevenueController.m */; };
 		B0ACAFA01A036FDC00709F9B /* KLLotteryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ACAF9F1A036FDC00709F9B /* KLLotteryViewController.m */; };
+		B0B6440E1A08F4090089F596 /* KLRestriction.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B6440D1A08F4090089F596 /* KLRestriction.m */; };
 		B0D50DD71A070FBE006CBA2F /* KLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DD41A070FBE006CBA2F /* KLCategory.m */; };
 		B0D50DD81A070FBE006CBA2F /* KLOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DD61A070FBE006CBA2F /* KLOrder.m */; };
 		B0D50DDF1A073813006CBA2F /* KLMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DDE1A073813006CBA2F /* KLMenuView.m */; };
-		B0D50DE21A07552F006CBA2F /* KLTGDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DE11A07552F006CBA2F /* KLTGDetailController.m */; };
+		B0D50DE21A07552F006CBA2F /* KLTGDealListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DE11A07552F006CBA2F /* KLTGDealListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,7 +213,6 @@
 		B01C34F41A04D10800B7082B /* KLCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCity.m; sourceTree = "<group>"; };
 		B01C34F61A04D1B200B7082B /* KLCitySection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCitySection.h; sourceTree = "<group>"; };
 		B01C34F71A04D1B200B7082B /* KLCitySection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCitySection.m; sourceTree = "<group>"; };
-		B01C34F91A04D35A00B7082B /* Categoriesaaa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categoriesaaa.plist; sourceTree = "<group>"; };
 		B01C34FA1A04D35A00B7082B /* Cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cities.plist; sourceTree = "<group>"; };
 		B01C34FB1A04D35A00B7082B /* Orders.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Orders.plist; sourceTree = "<group>"; };
 		B01C34FF1A04D83C00B7082B /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = Extention/Singleton.h; sourceTree = "<group>"; };
@@ -460,7 +459,7 @@
 		B033431D1A07B6AA00B10032 /* KLDealViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDealViewCell.h; sourceTree = "<group>"; };
 		B033431E1A07B6AA00B10032 /* KLDealViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDealViewCell.m; sourceTree = "<group>"; };
 		B033431F1A07B6AA00B10032 /* KLDealViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KLDealViewCell.xib; sourceTree = "<group>"; };
-		B03343221A07D71100B10032 /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		B03343221A07D71100B10032 /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
 		B03343241A07D91F00B10032 /* KLBaseCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBaseCategory.h; sourceTree = "<group>"; };
 		B03343251A07D91F00B10032 /* KLBaseCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBaseCategory.m; sourceTree = "<group>"; };
 		B03343271A07DAD700B10032 /* KLSubCategorie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLSubCategorie.h; sourceTree = "<group>"; };
@@ -547,14 +546,16 @@
 		B0ACAF9A1A0358F700709F9B /* RevenueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevenueController.m; sourceTree = "<group>"; };
 		B0ACAF9E1A036FDC00709F9B /* KLLotteryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLLotteryViewController.h; sourceTree = "<group>"; };
 		B0ACAF9F1A036FDC00709F9B /* KLLotteryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLLotteryViewController.m; sourceTree = "<group>"; };
+		B0B6440C1A08F4090089F596 /* KLRestriction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLRestriction.h; sourceTree = "<group>"; };
+		B0B6440D1A08F4090089F596 /* KLRestriction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLRestriction.m; sourceTree = "<group>"; };
 		B0D50DD31A070FBE006CBA2F /* KLCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCategory.h; sourceTree = "<group>"; };
 		B0D50DD41A070FBE006CBA2F /* KLCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCategory.m; sourceTree = "<group>"; };
 		B0D50DD51A070FBE006CBA2F /* KLOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLOrder.h; sourceTree = "<group>"; };
 		B0D50DD61A070FBE006CBA2F /* KLOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLOrder.m; sourceTree = "<group>"; };
 		B0D50DDD1A073813006CBA2F /* KLMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMenuView.h; sourceTree = "<group>"; };
 		B0D50DDE1A073813006CBA2F /* KLMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMenuView.m; sourceTree = "<group>"; };
-		B0D50DE01A07552F006CBA2F /* KLTGDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTGDetailController.h; sourceTree = "<group>"; };
-		B0D50DE11A07552F006CBA2F /* KLTGDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTGDetailController.m; sourceTree = "<group>"; };
+		B0D50DE01A07552F006CBA2F /* KLTGDealListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTGDealListController.h; sourceTree = "<group>"; };
+		B0D50DE11A07552F006CBA2F /* KLTGDealListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTGDealListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -596,8 +597,8 @@
 				B01C34EA1A04C81C00B7082B /* KLCitiesViewController.m */,
 				B01C35061A04EC3F00B7082B /* KLSearchController.h */,
 				B01C35071A04EC3F00B7082B /* KLSearchController.m */,
-				B0D50DE01A07552F006CBA2F /* KLTGDetailController.h */,
-				B0D50DE11A07552F006CBA2F /* KLTGDetailController.m */,
+				B0D50DE01A07552F006CBA2F /* KLTGDealListController.h */,
+				B0D50DE11A07552F006CBA2F /* KLTGDealListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -607,6 +608,8 @@
 			children = (
 				B01C34ED1A04D06A00B7082B /* KLBaseModel.h */,
 				B01C34EE1A04D06A00B7082B /* KLBaseModel.m */,
+				B0B6440C1A08F4090089F596 /* KLRestriction.h */,
+				B0B6440D1A08F4090089F596 /* KLRestriction.m */,
 				B03343171A07A09C00B10032 /* KLDeal.h */,
 				B03343181A07A09C00B10032 /* KLDeal.m */,
 				B0D50DAD1A070E57006CBA2F /* Menu */,
@@ -1210,8 +1213,7 @@
 			isa = PBXGroup;
 			children = (
 				B0A76ACE19FCCC3C00850748 /* KnowingLife-Prefix.pch */,
-				B03343221A07D71100B10032 /* categories.plist */,
-				B01C34F91A04D35A00B7082B /* Categoriesaaa.plist */,
+				B03343221A07D71100B10032 /* Categories.plist */,
 				B01C34FA1A04D35A00B7082B /* Cities.plist */,
 				B01C34FB1A04D35A00B7082B /* Orders.plist */,
 				B05CFA1219FE777000742155 /* ProvincesAndCities.plist */,
@@ -1470,9 +1472,8 @@
 				B03342C11A075AD700B10032 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				B0241B0F19FFCBBA00D94F3E /* AboutViewController.xib in Resources */,
 				B0385A5D1A01150E00F51EF7 /* HeaderViewCell.xib in Resources */,
-				B03343231A07D71100B10032 /* categories.plist in Resources */,
+				B03343231A07D71100B10032 /* Categories.plist in Resources */,
 				B0385A6E1A01150E00F51EF7 /* SimpleWeatherView.xib in Resources */,
-				B01C34FC1A04D35A00B7082B /* Categoriesaaa.plist in Resources */,
 				B0845B521A020EDB00776F30 /* Currency.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1574,6 +1575,7 @@
 				B01C34F81A04D1B200B7082B /* KLCitySection.m in Sources */,
 				B03342F11A075AD700B10032 /* NSError+REValidation.m in Sources */,
 				B03343291A07DAD700B10032 /* KLSubCategorie.m in Sources */,
+				B0B6440E1A08F4090089F596 /* KLRestriction.m in Sources */,
 				B03342C01A075AD700B10032 /* PinyinHelper.m in Sources */,
 				B03343161A079D8B00B10032 /* KLTGHttpTool.m in Sources */,
 				B03342C91A075AD700B10032 /* RETableViewBoolCell.m in Sources */,
@@ -1587,7 +1589,7 @@
 				B0A76ABF19FCC7E100850748 /* KLNavigationController.m in Sources */,
 				B03343121A07766D00B10032 /* DPAPI.m in Sources */,
 				B03343011A075AD700B10032 /* UIButton+WebCache.m in Sources */,
-				B0D50DE21A07552F006CBA2F /* KLTGDetailController.m in Sources */,
+				B0D50DE21A07552F006CBA2F /* KLTGDealListController.m in Sources */,
 				B01C34EF1A04D06A00B7082B /* KLBaseModel.m in Sources */,
 				B03342D51A075AD700B10032 /* MultilineTextCell.m in Sources */,
 				B03342EC1A075AD700B10032 /* RETableViewItem.m in Sources */,

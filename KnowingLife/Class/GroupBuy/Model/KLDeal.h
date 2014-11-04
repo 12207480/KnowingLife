@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class KLRestriction;
 @interface KLDeal : NSObject
 @property (nonatomic, copy) NSString *deal_id; // 团购ID
 @property (nonatomic, copy) NSString *title; // 标题
@@ -27,5 +28,14 @@
 @property (nonatomic, copy) NSString *s_image_url; // 小图
 @property (nonatomic, copy) NSString *deal_h5_url; // 链接
 
+// 详情界面需要显示的数据
+@property (nonatomic, copy) NSString *details; // 团购详情
+@property (nonatomic, copy) NSString *notice; // 重要通知
+
+@property (nonatomic, strong) KLRestriction *restrictions; // 限制
+
+
+// 商家信息
+@property (nonatomic, strong) NSArray *businesses;
 
 @end

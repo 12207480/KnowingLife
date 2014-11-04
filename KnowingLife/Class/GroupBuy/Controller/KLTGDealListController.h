@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KLTGDetailController : UIViewController
+@interface KLTGDealListController : UIViewController
 
 @end
