@@ -40,12 +40,7 @@
 // 通知
 // 城市改变的通知
 #define kCityChangeNote @"city_change"
-// 区域改变的通知
-#define kDistrictChangeNote @"district_change"
-// 分类改变的通知
-#define kCategoryChangeNote @"category_change"
-// 排序改变的通知
-#define kOrderChangeNote @"order_change"
+
 // 城市的key
 #define kCityKey @"city"
 

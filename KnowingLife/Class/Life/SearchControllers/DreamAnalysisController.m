@@ -118,7 +118,7 @@
                 newResult = [newResult stringByReplacingOccurrencesOfString:@"\n" withString:@""];
                 
                 // 添加结果
-                [weakSelf.resultSection addItem:[MultilineTextItem itemWithTitle:newResult font:[UIFont systemFontOfSize:14]]];
+                [weakSelf.resultSection addItem:[MultilineTextItem itemWithTitle:newResult fontSzie:14]];
             }
             
         } else {

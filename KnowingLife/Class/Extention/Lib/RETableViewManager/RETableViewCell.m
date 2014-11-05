@@ -114,6 +114,14 @@
     }
     if (self.textLabel.text.length == 0)
         self.textLabel.text = @" ";
+    
+    if (self.item.titleFontSize > 0) {
+        self.textLabel.font = [UIFont systemFontOfSize:self.item.titleFontSize];
+    }
+    
+    if (self.item.titleColor) {
+        [self.textLabel setTextColor:self.item.titleColor];
+    }
 }
 
 - (void)cellDidDisappear
@@ -141,6 +149,18 @@
         } else {
             self.textLabel.frame = CGRectMake(self.section.style.contentViewMargin, self.textLabel.frame.origin.y, self.textLabel.frame.size.width, self.textLabel.frame.size.height);
         }
+    }
+    
+    // 自定义
+    if (self.imageView.image && self.item.imageScale > 0 && self.item.imageScale < 1) {
+        CGFloat imageScale = self.item.imageScale;
+        CGPoint imageCenter = self.imageView.center;
+        CGRect imageFrame = self.imageView.frame;
+        imageFrame.size = CGSizeMake(imageFrame.size.width * imageScale, imageFrame.size.height * imageScale);
+        self.imageView.frame = imageFrame;
+        self.imageView.center = imageCenter;
+        
+        self.textLabel.frame = CGRectMake(self.textLabel.frame.origin.x - imageFrame.size.width * 1.1  , self.textLabel.frame.origin.y, self.textLabel.frame.size.width, self.textLabel.frame.size.height);
     }
     
     if ([self.section.style hasCustomBackgroundImage]) {

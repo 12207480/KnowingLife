@@ -21,6 +21,9 @@
     // 设置按钮背景颜色
     [self.buyButton setBackgroundImage:[UIImage resizedImageWithName:@"bg_deal_purchaseButton"] forState:UIControlStateNormal];
     [self.buyButton setBackgroundImage:[UIImage resizedImageWithName:@"bg_deal_purchaseButton_highlighted"] forState:UIControlStateHighlighted];
+    
+    // 设置透明度
+    self.alpha = 0.8;
 }
 
 + (instancetype)createBuyDock

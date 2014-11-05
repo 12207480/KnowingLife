@@ -28,7 +28,7 @@ static const CGFloat kVerticalMargin = 10.0;
         horizontalMargin += 5.0;
     
     CGFloat width = CGRectGetWidth(tableViewManager.tableView.bounds) - 2.0 * horizontalMargin;
-    return [item.title re_sizeWithFont:item.titleFont constrainedToSize:CGSizeMake(width, INFINITY)].height + 2.0 * kVerticalMargin;
+    return [item.title re_sizeWithFont:[UIFont systemFontOfSize:item.titleFontSize] constrainedToSize:CGSizeMake(width, INFINITY)].height + 2.0 * kVerticalMargin;
 }
 
 - (void)cellDidLoad
@@ -46,7 +46,8 @@ static const CGFloat kVerticalMargin = 10.0;
 {
     [super cellWillAppear];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    self.multilineLabel.font = self.item.titleFont;
+    self.multilineLabel.font = self.textLabel.font;
+    self.multilineLabel.textColor = self.textLabel.textColor;
     self.textLabel.text = @"";
     self.multilineLabel.text = self.item.title;
 }

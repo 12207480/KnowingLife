@@ -7,8 +7,8 @@
 //
 
 #import "RETableViewCell.h"
-#import "KLImageItem.h"
 
+@class KLImageItem;
 @interface KLImageCell : RETableViewCell
 
 @property (strong, readonly, nonatomic) UIImageView *pictureView;

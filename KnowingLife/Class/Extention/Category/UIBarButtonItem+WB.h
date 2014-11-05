@@ -11,6 +11,8 @@
 @interface UIBarButtonItem (WB)
 + (UIBarButtonItem *)itemWithIcon:(NSString *)icon highlightIcon:(NSString *)highlightIcon target:(id)target action:(SEL)action;
 
++ (UIBarButtonItem *)itemWithIcon:(NSString *)icon highlightIcon:(NSString *)highlightIcon imageScale:(CGFloat)imageScale target:(id)target action:(SEL)action;
+
 + (UIBarButtonItem *)itemWithIcon:(NSString *)icon target:(id)target action:(SEL)action;
 + (UIBarButtonItem *)itemWithTitle:(NSString *)tilte;
 @end

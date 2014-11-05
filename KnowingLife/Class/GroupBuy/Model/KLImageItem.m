@@ -17,10 +17,11 @@
     return item;
 }
 
-+ (KLImageItem *)itemWithImageUrl:(NSString *)imageUrl
++ (KLImageItem *)itemWithImageUrl:(NSString *)imageUrl isReservation:(BOOL)isReservation
 {
     KLImageItem *item = [[KLImageItem alloc] init];
     item.imageUrl = imageUrl;
+    item.isReservation = isReservation;
     return item;
 }
 

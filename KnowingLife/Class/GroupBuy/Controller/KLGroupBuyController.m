@@ -60,10 +60,10 @@ static NSString * const reuseHeaderIdentifier = @"HeaderViewCell";
     
     // 添加导航按钮
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithIcon:@"ios7_top_navigation_locationicon" target:self action:@selector(selectCity)];
-    
     // 当前城市
      KLCity *currentcity = [KLMetaDataTool sharedKLMetaDataTool].currentCity;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:currentcity.name style:UIBarButtonItemStylePlain target:nil action:nil];
+    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:currentcity.name style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTitle:currentcity.name];
     
     // 监听城市改变的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityChange) name:kCityChangeNote object:nil];

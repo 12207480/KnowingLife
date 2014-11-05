@@ -95,11 +95,13 @@ static NSString *reuseIdDealCell = @"DealCell";
     [self.tableView headerBeginRefreshing];
 }
 
+// 退出
 - (void)cancel
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+// 保持当前分类数据
 - (void)saveCurrentCategory
 {
     // 保存选择的分类
@@ -148,6 +150,7 @@ static NSString *reuseIdDealCell = @"DealCell";
     self.orders = [KLMetaDataTool sharedKLMetaDataTool].totalOrders;
 }
 
+#pragma mark 添加TopMenu
 - (void)addTopMenu
 {
     DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 0) andHeight:KMenuHeight];
@@ -156,6 +159,7 @@ static NSString *reuseIdDealCell = @"DealCell";
     [self.view addSubview:menu];
 }
 
+#pragma mark 添加TableView
 - (void)addTableView
 {
     UITableView *tableView = [[UITableView alloc]init];
@@ -166,7 +170,7 @@ static NSString *reuseIdDealCell = @"DealCell";
     self.tableView = tableView;
 }
 
-// 添加上下拉刷新
+#pragma mark 添加上下拉刷新
 - (void)addRefreshView
 {
     // 下拉刷新
@@ -355,15 +359,10 @@ static NSString *reuseIdDealCell = @"DealCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     KLDeal *deal = self.deals[indexPath.row];
+    
     KLDetailDealController *detailDealCrl = [[KLDetailDealController alloc]init];
     detailDealCrl.deal = deal;
     [self.navigationController pushViewController:detailDealCrl animated:YES];
-    
-//    [[KLTGHttpTool sharedKLTGHttpTool] dealWithID:deal.deal_id success:^(KLDeal *deal) {
-//        KLLog(@"%@",deal);
-//    } error:^(NSError *error) {
-//        KLLog(@"%@",error);
-//    }];
 }
 
 - (void)dealloc

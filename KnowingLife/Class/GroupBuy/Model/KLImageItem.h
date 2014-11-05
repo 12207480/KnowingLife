@@ -13,9 +13,11 @@
 @property (copy, readwrite, nonatomic) NSString *imageName;
 
 @property (nonatomic, copy) NSString *imageUrl;
+// 免预约
+@property (nonatomic, assign) BOOL isReservation;
 
 + (KLImageItem *)itemWithImageNamed:(NSString *)imageName;
 
-+ (KLImageItem *)itemWithImageUrl:(NSString *)imageUrl;
++ (KLImageItem *)itemWithImageUrl:(NSString *)imageUrl isReservation:(BOOL)isReservation;
 
 @end

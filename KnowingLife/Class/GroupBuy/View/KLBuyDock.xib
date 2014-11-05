@@ -17,6 +17,12 @@
                     <color key="textColor" red="0.14901961386203766" green="0.71764707565307617" blue="0.60000002384185791" alpha="1" colorSpace="deviceRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="元" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAp-If-xU2">
+                    <rect key="frame" x="40" y="14" width="22" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.14901961389999999" green="0.71764707569999997" blue="0.60000002379999995" alpha="1" colorSpace="deviceRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="128元" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfp-ik-E2b" customClass="KLLineLabel">
                     <rect key="frame" x="62" y="15" width="52" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -31,12 +37,9 @@
                     </state>
                     <state key="highlighted" title="立即购买"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="元" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAp-If-xU2">
-                    <rect key="frame" x="40" y="14" width="22" height="22"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" red="0.14901961389999999" green="0.71764707569999997" blue="0.60000002379999995" alpha="1" colorSpace="deviceRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="separator_tabbar_item" translatesAutoresizingMaskIntoConstraints="NO" id="LXb-fA-QMe">
+                    <rect key="frame" x="0.0" y="45" width="320" height="1"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -47,7 +50,10 @@
                 <outlet property="priceLable" destination="hnk-5n-5sa" id="lpQ-V8-0E3"/>
                 <outlet property="yuanLable" destination="LAp-If-xU2" id="By3-EG-QRv"/>
             </connections>
-            <point key="canvasLocation" x="192" y="130"/>
+            <point key="canvasLocation" x="192" y="132"/>
         </view>
     </objects>
+    <resources>
+        <image name="separator_tabbar_item" width="202" height="4"/>
+    </resources>
 </document>

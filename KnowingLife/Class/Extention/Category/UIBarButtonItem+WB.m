@@ -19,9 +19,20 @@
     return [[UIBarButtonItem alloc]initWithCustomView:button];
 }
 
++ (UIBarButtonItem *)itemWithIcon:(NSString *)icon highlightIcon:(NSString *)highlightIcon imageScale:(CGFloat)imageScale target:(id)target action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setBackgroundImage:[UIImage imageWithName:icon] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageWithName:highlightIcon] forState:UIControlStateHighlighted];
+    CGSize btnSize = CGSizeMake(button.currentBackgroundImage.size.width * imageScale, button.currentBackgroundImage.size.height * imageScale);
+    button.frame = (CGRect){CGPointZero,btnSize};
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc]initWithCustomView:button];
+}
+
 + (UIBarButtonItem *)itemWithIcon:(NSString *)icon target:(id)target action:(SEL)action
 {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setBackgroundImage:[UIImage imageWithName:icon] forState:UIControlStateNormal];
     button.frame = (CGRect){CGPointZero,button.currentBackgroundImage.size};
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
@@ -34,7 +45,7 @@
     button.frame = (CGRect){CGPointZero,CGSizeMake(50, 36)};
     [button setTitle:tilte forState:UIControlStateNormal];
     [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
+    button.userInteractionEnabled = NO;
     button.titleLabel.font = [UIFont systemFontOfSize:15];
     return [[UIBarButtonItem alloc]initWithCustomView:button];
 }

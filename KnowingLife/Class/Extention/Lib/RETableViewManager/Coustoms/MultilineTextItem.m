@@ -10,25 +10,4 @@
 
 @implementation MultilineTextItem
 
-- (UIFont *)titleFont
-{
-    if (_titleFont == nil) {
-        _titleFont = [UIFont systemFontOfSize:17];
-    }
-    return _titleFont;
-}
-
-+ (instancetype)itemWithTitle:(NSString *)title font:(UIFont *)font
-{
-    return [[self alloc]initWithTitle:title font:font];
-}
-
-- (id)initWithTitle:(NSString *)title font:(UIFont *)font
-{
-    if (self = [super initWithTitle:title]) {
-        self.titleFont = font;
-    }
-    return self;
-}
-
 @end

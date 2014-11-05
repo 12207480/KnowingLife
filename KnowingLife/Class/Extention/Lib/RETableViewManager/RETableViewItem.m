@@ -39,6 +39,19 @@
     return [[self alloc] initWithTitle:title];
 }
 
++ (instancetype)itemWithTitle:(NSString *)title fontSzie:(NSInteger)fontSize
+{
+    return [[self alloc]initWithTitle:title fontSzie:fontSize];
+}
+
+- (id)initWithTitle:(NSString *)title fontSzie:(NSInteger)fontSize
+{
+    if (self = [self initWithTitle:title]) {
+        self.titleFontSize = fontSize;
+    }
+    return self;
+}
+
 + (instancetype)itemWithTitle:(NSString *)title accessoryType:(UITableViewCellAccessoryType)accessoryType selectionHandler:(void(^)(RETableViewItem *item))selectionHandler
 {
     return [[self alloc] initWithTitle:title accessoryType:accessoryType selectionHandler:selectionHandler accessoryButtonTapHandler:nil];

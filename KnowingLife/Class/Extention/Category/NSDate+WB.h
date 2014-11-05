@@ -10,4 +10,5 @@
 
 @interface NSDate (WB)
 +(NSString *) compareCurrentTime:(NSDate*) compareDate;
+- (NSDateComponents *)compare:(NSDate *)other;
 @end

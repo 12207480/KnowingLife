@@ -32,6 +32,11 @@
 @interface RETableViewItem : NSObject
 
 @property (copy, readwrite, nonatomic) NSString *title;
+// 自定义title字体 颜色
+@property (nonatomic, assign) NSInteger titleFontSize;
+@property (nonatomic, strong) UIColor *titleColor;
+@property (nonatomic, assign) CGFloat imageScale;
+
 @property (strong, readwrite, nonatomic) UIImage *image;
 @property (strong, readwrite, nonatomic) UIImage *highlightedImage;
 @property (assign, readwrite, nonatomic) NSTextAlignment textAlignment;
@@ -69,6 +74,10 @@
 
 + (instancetype)item;
 + (instancetype)itemWithTitle:(NSString *)title;
+// 自定义
++ (instancetype)itemWithTitle:(NSString *)title fontSzie:(NSInteger)fontSize;
+- (id)initWithTitle:(NSString *)title fontSzie:(NSInteger)fontSize;
+
 + (instancetype)itemWithTitle:(NSString *)title accessoryType:(UITableViewCellAccessoryType)accessoryType selectionHandler:(void(^)(RETableViewItem *item))selectionHandler;
 + (instancetype)itemWithTitle:(NSString *)title accessoryType:(UITableViewCellAccessoryType)accessoryType selectionHandler:(void(^)(RETableViewItem *item))selectionHandler accessoryButtonTapHandler:(void(^)(RETableViewItem *item))accessoryButtonTapHandler;
 
