@@ -27,6 +27,7 @@
 #import "FangDaiViewController.h"
 #import "RevenueController.h"
 #import "KLLotteryViewController.h"
+#import "KLLocationTool.h"
 
 @interface ProductCollectionController ()<CitysViewdelegate>
 @property (nonatomic, strong) NSMutableArray *sections;
@@ -60,6 +61,12 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithIcon:@"ios7_top_navigation_locationicon" target:self action:@selector(selectCity)];
     
+    // 定位
+    [KLLocationTool sharedKLLocationTool];
+    
+    // 监听定位城市改变的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationCity) name:LocationCityNote object:nil];
+    
     // 读取当前城市
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *city = [defaults objectForKey:@"currentCity"];
@@ -81,7 +88,7 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
     
 }
 
-// 注册Cells
+#pragma mark 注册Cells
 - (void)registerCells
 {
     // 注册内容cell
@@ -97,6 +104,15 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
     [self.collectionView registerNib:nib forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader withReuseIdentifier:reuseTopHeaderIdentifier];
 }
 
+#pragma mark 收到定位城市通知
+- (void)locationCity
+{
+    if ([KLLocationTool sharedKLLocationTool].locationCity.city) {
+        [self loadWeatherData:[KLLocationTool sharedKLLocationTool].locationCity.city];
+    }
+}
+
+#pragma mark 获取城市天气数据
 - (void)loadWeatherData:(NSString *)city
 {
     [KLSearchHttpTool getWeatherDataWithCity:city success:^(id json) {
@@ -123,6 +139,7 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
     [defaults setObject:city forKey:@"currentCity"];
 }
 
+#pragma mark 选择城市
 - (void)selectCity
 {
     //NSLog(@"selectCity");
@@ -225,14 +242,6 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
     return nil;
 }
 
-// 点击WeatherView
-- (void)tapWeatherView
-{
-    WeatherViewController *weatherCtr = [[WeatherViewController alloc]init];
-    weatherCtr.weatherInfo = self.weatherInfo;
-    [self.navigationController pushViewController:weatherCtr animated:YES];
-}
-
 #pragma mark <UICollectionViewDelegate>
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -251,6 +260,19 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
         vc.title = item.title;
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+#pragma mark 点击WeatherView
+- (void)tapWeatherView
+{
+    WeatherViewController *weatherCtr = [[WeatherViewController alloc]init];
+    weatherCtr.weatherInfo = self.weatherInfo;
+    [self.navigationController pushViewController:weatherCtr animated:YES];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

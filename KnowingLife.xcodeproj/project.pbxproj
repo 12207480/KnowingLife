@@ -199,6 +199,10 @@
 		B0D50DD81A070FBE006CBA2F /* KLOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DD61A070FBE006CBA2F /* KLOrder.m */; };
 		B0D50DDF1A073813006CBA2F /* KLMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DDE1A073813006CBA2F /* KLMenuView.m */; };
 		B0D50DE21A07552F006CBA2F /* KLTGDealListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DE11A07552F006CBA2F /* KLTGDealListController.m */; };
+		B0F353221A0A625C006E6E04 /* KLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F353211A0A625C006E6E04 /* KLMapViewController.m */; };
+		B0F353241A0A62B3006E6E04 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F353231A0A62B3006E6E04 /* MapKit.framework */; };
+		B0F353261A0A62C9006E6E04 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F353251A0A62C9006E6E04 /* CoreLocation.framework */; };
+		B0F353291A0A6C6F006E6E04 /* KLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F353281A0A6C6F006E6E04 /* KLLocationTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -587,6 +591,12 @@
 		B0D50DDE1A073813006CBA2F /* KLMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMenuView.m; sourceTree = "<group>"; };
 		B0D50DE01A07552F006CBA2F /* KLTGDealListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTGDealListController.h; sourceTree = "<group>"; };
 		B0D50DE11A07552F006CBA2F /* KLTGDealListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTGDealListController.m; sourceTree = "<group>"; };
+		B0F353201A0A625C006E6E04 /* KLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMapViewController.h; sourceTree = "<group>"; };
+		B0F353211A0A625C006E6E04 /* KLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMapViewController.m; sourceTree = "<group>"; };
+		B0F353231A0A62B3006E6E04 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B0F353251A0A62C9006E6E04 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B0F353271A0A6C6F006E6E04 /* KLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLLocationTool.h; sourceTree = "<group>"; };
+		B0F353281A0A6C6F006E6E04 /* KLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLLocationTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,6 +604,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F353261A0A62C9006E6E04 /* CoreLocation.framework in Frameworks */,
+				B0F353241A0A62B3006E6E04 /* MapKit.framework in Frameworks */,
 				B0241B0919FFC6F300D94F3E /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +646,8 @@
 				B0923A3E1A091031007F1134 /* KLDetailDealController.m */,
 				B070A1CC1A0A030E00E82696 /* KLDetailWebInfoController.h */,
 				B070A1CD1A0A030E00E82696 /* KLDetailWebInfoController.m */,
+				B0F353201A0A625C006E6E04 /* KLMapViewController.h */,
+				B0F353211A0A625C006E6E04 /* KLMapViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -688,6 +702,8 @@
 				B01C35011A04D87900B7082B /* KLMetaDataTool.m */,
 				B03343141A079D8B00B10032 /* KLTGHttpTool.h */,
 				B03343151A079D8B00B10032 /* KLTGHttpTool.m */,
+				B0F353271A0A6C6F006E6E04 /* KLLocationTool.h */,
+				B0F353281A0A6C6F006E6E04 /* KLLocationTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -695,6 +711,8 @@
 		B0241B0A19FFC70B00D94F3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0F353251A0A62C9006E6E04 /* CoreLocation.framework */,
+				B0F353231A0A62B3006E6E04 /* MapKit.framework */,
 				B0241B0819FFC6F300D94F3E /* MessageUI.framework */,
 			);
 			name = Frameworks;
@@ -1596,6 +1614,7 @@
 				B03342B31A075AD700B10032 /* NSObject+MJMember.m in Sources */,
 				B03342D71A075AD700B10032 /* WBSubtitleCell.m in Sources */,
 				B03342C81A075AD700B10032 /* REMenuItemView.m in Sources */,
+				B0F353291A0A6C6F006E6E04 /* KLLocationTool.m in Sources */,
 				B03342E31A075AD700B10032 /* RERadioItem.m in Sources */,
 				B0385A651A01150E00F51EF7 /* CitysViewController.m in Sources */,
 				B0D50DDF1A073813006CBA2F /* KLMenuView.m in Sources */,
@@ -1653,6 +1672,7 @@
 				B0A76ACA19FCCA0500850748 /* UIBarButtonItem+WB.m in Sources */,
 				B03C533519FCCE2700647439 /* KLTableBarController.m in Sources */,
 				B0A777DD19FF358A006F8BD5 /* KLNewsViewController.m in Sources */,
+				B0F353221A0A625C006E6E04 /* KLMapViewController.m in Sources */,
 				B0385A671A01150E00F51EF7 /* WeatherViewController.m in Sources */,
 				B0A76ABF19FCC7E100850748 /* KLNavigationController.m in Sources */,
 				B03343121A07766D00B10032 /* DPAPI.m in Sources */,

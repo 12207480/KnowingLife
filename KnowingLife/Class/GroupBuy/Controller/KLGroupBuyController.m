@@ -20,6 +20,8 @@
 #import "ProductSection.h"
 #import "HeaderViewCell.h"
 #import "KLTGDealListController.h"
+#import "KLMapViewController.h"
+#import "KLLocationTool.h"
 
 @interface KLGroupBuyController ()
 @property (nonatomic, strong) NSMutableArray *sections;
@@ -59,14 +61,18 @@ static NSString * const reuseHeaderIdentifier = @"HeaderViewCell";
     [super viewDidLoad];
     
     // 添加导航按钮
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithIcon:@"ios7_top_navigation_locationicon" target:self action:@selector(selectCity)];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithIcon:@"ios7_top_navigation_locationicon" target:self action:@selector(openMapView)];
+    
     // 当前城市
      KLCity *currentcity = [KLMetaDataTool sharedKLMetaDataTool].currentCity;
-    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:currentcity.name style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTitle:currentcity.name];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:currentcity.name style:UIBarButtonItemStylePlain target:self action:@selector(selectCity)];
     
-    // 监听城市改变的通知
+    // 监听选择城市改变的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cityChange) name:kCityChangeNote object:nil];
+    // 监听定位城市改变的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationCity) name:LocationCityNote object:nil];
+    
+    [self locationCity];
     
     self.collectionView.backgroundColor = KLCollectionBkgCollor;
     // 注册内容cell
@@ -79,6 +85,7 @@ static NSString * const reuseHeaderIdentifier = @"HeaderViewCell";
     [self addSectionEntertainment];
 }
 
+#pragma mark 选择城市
 - (void)selectCity
 {
     KLCitiesViewController *cities = [[KLCitiesViewController alloc]init];
@@ -86,12 +93,31 @@ static NSString * const reuseHeaderIdentifier = @"HeaderViewCell";
     [self.navigationController pushViewController:cities animated:YES];
 }
 
+- (void)openMapView
+{
+    KLMapViewController *mapctrl = [[KLMapViewController alloc]init];
+    [self.navigationController pushViewController:mapctrl animated:YES];
+}
+
+#pragma mark 城市改变
 - (void)cityChange
 {
     self.navigationItem.leftBarButtonItem.title = [KLMetaDataTool sharedKLMetaDataTool].currentCity.name;
 }
 
-// 注册Cells
+- (void)locationCity
+{
+    NSString *cityName = [KLLocationTool sharedKLLocationTool].locationCity.city;
+     //取出城市模型
+    if (cityName) {
+        // 更新城市
+        KLCity *city = [KLMetaDataTool sharedKLMetaDataTool].totalCities[cityName];
+        [KLMetaDataTool sharedKLMetaDataTool].currentCity = city;
+
+    }
+}
+
+#pragma mark 注册Cells
 - (void)registerCells
 {
     // 注册内容cell
@@ -103,6 +129,7 @@ static NSString * const reuseHeaderIdentifier = @"HeaderViewCell";
     [self.collectionView registerNib:nib forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:reuseHeaderIdentifier];
 }
 
+#pragma mark 添加购物组
 - (void)addSectionBuy
 {
     ProductSection *section = [ProductSection section];
@@ -115,6 +142,7 @@ static NSString * const reuseHeaderIdentifier = @"HeaderViewCell";
     [self.sections addObject:section];
 }
 
+#pragma mark 添加娱乐组
 - (void)addSectionEntertainment
 {
     ProductSection *section = [ProductSection section];

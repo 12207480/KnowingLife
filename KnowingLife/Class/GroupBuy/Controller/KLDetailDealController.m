@@ -81,6 +81,7 @@
     
 }
 
+// 退出
 - (void)cancel
 {
     [self.navigationController popViewControllerAnimated:YES];
@@ -271,6 +272,7 @@
     [self.manager addSection:section];
 }
 
+#pragma mark scrollViewDelegate
 // 滚动保持dock在最下面
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
