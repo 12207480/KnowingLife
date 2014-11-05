@@ -37,4 +37,19 @@
     return [image stretchableImageWithLeftCapWidth:image.size.width*0.5 topCapHeight:image.size.height*0.5];
 }
 
+- (UIImage *)imageToSize:(CGSize) size
+{
+    
+    UIGraphicsBeginImageContext(size);
+    
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+    
+}
+
 @end

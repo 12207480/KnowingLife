@@ -14,6 +14,7 @@
 #import "KLDeal.h"
 #import "KLCategory.h"
 #import "MJExtension.h"
+#import "KLLocationTool.h"
 
 typedef void (^RequestBlock)(id result, NSError *errorObj);
 
@@ -35,7 +36,7 @@ singleton_implementation(KLTGHttpTool)
 }
 
 #pragma mark 获得大批量团购
-- (void)getDealsWithParams:(NSMutableDictionary *)params success:(DealsSuccessBlock)success error:(DealsErrorBlock)error
+- (void)getDealsWithParams:(NSDictionary *)params success:(DealsSuccessBlock)success error:(DealsErrorBlock)error
 {
     [self requestWithURL:@"v1/deal/find_deals" params:params block:^(id result, NSError *errorObj) {
         if (errorObj) { // 请求失败
@@ -136,6 +137,22 @@ singleton_implementation(KLTGHttpTool)
             }
         }
     }];
+}
+
+#pragma mark 获得周边的团购
+- (void)dealsWithLatitude:(CGFloat)latitude longitude:(CGFloat)longitude success:(DealsSuccessBlock)success error:(DealsErrorBlock)error
+{
+    // 获得位置城市
+    KLLocationCity *locationCity = [KLLocationTool sharedKLLocationTool].locationCity;
+    if (locationCity == nil || locationCity.city == nil) return;
+    
+    // 发送请求
+    [self getDealsWithParams:@{
+                               @"city" : locationCity.city,
+                               @"latitude" : @(latitude),
+                               @"longitude" : @(longitude),
+                               @"radius" : @5000
+                               } success:success error:error];
 }
 
 #pragma mark 封装了点评的任何请求

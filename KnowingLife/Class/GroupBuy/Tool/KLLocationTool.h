@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 // 城市位置类
-@interface KLLoCationCity : NSObject
+@interface KLLocationCity : NSObject
 @property (nonatomic, copy) NSString *city;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @end
@@ -22,5 +22,5 @@
 singleton_interface(KLLocationTool)
 
 // 定位城市
-@property (nonatomic, strong) KLLoCationCity *locationCity;
+@property (nonatomic, strong) KLLocationCity *locationCity;
 @end

@@ -9,7 +9,7 @@
 #import "KLLocationTool.h"
 #import <CoreLocation/CoreLocation.h>
 
-@implementation KLLoCationCity
+@implementation KLLocationCity
 @end
 
 @interface KLLocationTool () <CLLocationManagerDelegate>
@@ -51,7 +51,7 @@ singleton_implementation(KLLocationTool)
          cityName = [cityName substringToIndex:cityName.length - 1];
          
          // 设置定位城市
-         _locationCity = [[KLLoCationCity alloc]init];
+         _locationCity = [[KLLocationCity alloc]init];
          _locationCity.city = cityName;
          _locationCity.coordinate = loc.coordinate;
          

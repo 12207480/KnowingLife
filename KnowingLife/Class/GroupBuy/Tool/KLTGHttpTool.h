@@ -33,4 +33,7 @@ singleton_interface(KLTGHttpTool)
 // 获得指定团购数据
 - (void)dealWithID:(NSString *)ID success:(DealSuccessBlock)success error:(DealErrorBlock)error;
 
+// 获得周边团购数据
+- (void)dealsWithLatitude:(CGFloat)latitude longitude:(CGFloat)longitude success:(DealsSuccessBlock)success error:(DealsErrorBlock)error;
+
 @end

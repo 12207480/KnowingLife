@@ -203,6 +203,8 @@
 		B0F353241A0A62B3006E6E04 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F353231A0A62B3006E6E04 /* MapKit.framework */; };
 		B0F353261A0A62C9006E6E04 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F353251A0A62C9006E6E04 /* CoreLocation.framework */; };
 		B0F353291A0A6C6F006E6E04 /* KLLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F353281A0A6C6F006E6E04 /* KLLocationTool.m */; };
+		B0F3532C1A0A8179006E6E04 /* KLBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3532B1A0A8179006E6E04 /* KLBusiness.m */; };
+		B0F353301A0A87CB006E6E04 /* KLDealAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3532F1A0A87CB006E6E04 /* KLDealAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -597,6 +599,10 @@
 		B0F353251A0A62C9006E6E04 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B0F353271A0A6C6F006E6E04 /* KLLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLLocationTool.h; sourceTree = "<group>"; };
 		B0F353281A0A6C6F006E6E04 /* KLLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLLocationTool.m; sourceTree = "<group>"; };
+		B0F3532A1A0A8179006E6E04 /* KLBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLBusiness.h; sourceTree = "<group>"; };
+		B0F3532B1A0A8179006E6E04 /* KLBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLBusiness.m; sourceTree = "<group>"; };
+		B0F3532E1A0A87CB006E6E04 /* KLDealAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLDealAnnotation.h; sourceTree = "<group>"; };
+		B0F3532F1A0A87CB006E6E04 /* KLDealAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLDealAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -657,16 +663,11 @@
 			children = (
 				B01C34ED1A04D06A00B7082B /* KLBaseModel.h */,
 				B01C34EE1A04D06A00B7082B /* KLBaseModel.m */,
-				B0B6440C1A08F4090089F596 /* KLRestriction.h */,
-				B0B6440D1A08F4090089F596 /* KLRestriction.m */,
-				B03343171A07A09C00B10032 /* KLDeal.h */,
-				B03343181A07A09C00B10032 /* KLDeal.m */,
-				B0923A4A1A09518C007F1134 /* KLRestrictItem.h */,
-				B0923A4B1A09518C007F1134 /* KLRestrictItem.m */,
-				B0923A3A1A090F14007F1134 /* KLImageItem.h */,
-				B0923A3B1A090F14007F1134 /* KLImageItem.m */,
+				B0F3532D1A0A8193006E6E04 /* Deal */,
 				B0D50DAD1A070E57006CBA2F /* Menu */,
 				B0D50DAC1A070E39006CBA2F /* City */,
+				B0F3532E1A0A87CB006E6E04 /* KLDealAnnotation.h */,
+				B0F3532F1A0A87CB006E6E04 /* KLDealAnnotation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1455,6 +1456,23 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		B0F3532D1A0A8193006E6E04 /* Deal */ = {
+			isa = PBXGroup;
+			children = (
+				B0B6440C1A08F4090089F596 /* KLRestriction.h */,
+				B0B6440D1A08F4090089F596 /* KLRestriction.m */,
+				B03343171A07A09C00B10032 /* KLDeal.h */,
+				B03343181A07A09C00B10032 /* KLDeal.m */,
+				B0F3532A1A0A8179006E6E04 /* KLBusiness.h */,
+				B0F3532B1A0A8179006E6E04 /* KLBusiness.m */,
+				B0923A4A1A09518C007F1134 /* KLRestrictItem.h */,
+				B0923A4B1A09518C007F1134 /* KLRestrictItem.m */,
+				B0923A3A1A090F14007F1134 /* KLImageItem.h */,
+				B0923A3B1A090F14007F1134 /* KLImageItem.m */,
+			);
+			name = Deal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1601,6 +1619,7 @@
 				B03342EA1A075AD700B10032 /* RETableViewCell.m in Sources */,
 				B05CF9EB19FE3ED200742155 /* KLHttpTool.m in Sources */,
 				B080E5AC1A028ADA00C819A4 /* FangResultViewController.m in Sources */,
+				B0F3532C1A0A8179006E6E04 /* KLBusiness.m in Sources */,
 				B0923A391A090F00007F1134 /* KLImageCell.m in Sources */,
 				B03342A01A075AD700B10032 /* AFURLRequestSerialization.m in Sources */,
 				B070A1CE1A0A030E00E82696 /* KLDetailWebInfoController.m in Sources */,
@@ -1670,6 +1689,7 @@
 				B080E5AB1A028ADA00C819A4 /* FangDaiViewController.m in Sources */,
 				B033429A1A075AD700B10032 /* AFHTTPRequestOperation.m in Sources */,
 				B0A76ACA19FCCA0500850748 /* UIBarButtonItem+WB.m in Sources */,
+				B0F353301A0A87CB006E6E04 /* KLDealAnnotation.m in Sources */,
 				B03C533519FCCE2700647439 /* KLTableBarController.m in Sources */,
 				B0A777DD19FF358A006F8BD5 /* KLNewsViewController.m in Sources */,
 				B0F353221A0A625C006E6E04 /* KLMapViewController.m in Sources */,

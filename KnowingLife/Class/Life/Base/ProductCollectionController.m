@@ -107,7 +107,8 @@ static NSString * const reuseTopHeaderIdentifier = @"TopHeaderViewCell";
 #pragma mark 收到定位城市通知
 - (void)locationCity
 {
-    if ([KLLocationTool sharedKLLocationTool].locationCity.city) {
+    KLLocationCity *locationCity = [KLLocationTool sharedKLLocationTool].locationCity;
+    if (locationCity && locationCity.city) {
         [self loadWeatherData:[KLLocationTool sharedKLLocationTool].locationCity.city];
     }
 }

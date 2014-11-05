@@ -8,8 +8,16 @@
 
 #import "KLDeal.h"
 #import "NSString+TG.h"
+#import "KLBusiness.h"
+#import "MJExtension.h"
 
 @implementation KLDeal
+
+- (NSDictionary *)objectClassInArray
+{
+    return @{@"businesses":[KLBusiness class]};
+}
+
 - (void)setList_price:(double)list_price
 {
     _list_price = list_price;
