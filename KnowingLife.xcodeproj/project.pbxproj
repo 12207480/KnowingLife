@@ -199,6 +199,7 @@
 		B0D50DD81A070FBE006CBA2F /* KLOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DD61A070FBE006CBA2F /* KLOrder.m */; };
 		B0D50DDF1A073813006CBA2F /* KLMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DDE1A073813006CBA2F /* KLMenuView.m */; };
 		B0D50DE21A07552F006CBA2F /* KLTGDealListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D50DE11A07552F006CBA2F /* KLTGDealListController.m */; };
+		B0D765DA1A0B182D0050D062 /* KLNewsMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D765D91A0B182D0050D062 /* KLNewsMenuController.m */; };
 		B0F353221A0A625C006E6E04 /* KLMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F353211A0A625C006E6E04 /* KLMapViewController.m */; };
 		B0F353241A0A62B3006E6E04 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F353231A0A62B3006E6E04 /* MapKit.framework */; };
 		B0F353261A0A62C9006E6E04 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F353251A0A62C9006E6E04 /* CoreLocation.framework */; };
@@ -593,6 +594,8 @@
 		B0D50DDE1A073813006CBA2F /* KLMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMenuView.m; sourceTree = "<group>"; };
 		B0D50DE01A07552F006CBA2F /* KLTGDealListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTGDealListController.h; sourceTree = "<group>"; };
 		B0D50DE11A07552F006CBA2F /* KLTGDealListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTGDealListController.m; sourceTree = "<group>"; };
+		B0D765D81A0B182D0050D062 /* KLNewsMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLNewsMenuController.h; sourceTree = "<group>"; };
+		B0D765D91A0B182D0050D062 /* KLNewsMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLNewsMenuController.m; sourceTree = "<group>"; };
 		B0F353201A0A625C006E6E04 /* KLMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLMapViewController.h; sourceTree = "<group>"; };
 		B0F353211A0A625C006E6E04 /* KLMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLMapViewController.m; sourceTree = "<group>"; };
 		B0F353231A0A62B3006E6E04 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -1407,6 +1410,8 @@
 			children = (
 				B0A777DB19FF358A006F8BD5 /* KLNewsViewController.h */,
 				B0A777DC19FF358A006F8BD5 /* KLNewsViewController.m */,
+				B0D765D81A0B182D0050D062 /* KLNewsMenuController.h */,
+				B0D765D91A0B182D0050D062 /* KLNewsMenuController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1667,6 +1672,7 @@
 				B0385A691A01150E00F51EF7 /* KLWeatherInfo.m in Sources */,
 				B033429E1A075AD700B10032 /* AFSecurityPolicy.m in Sources */,
 				B0385A5C1A01150E00F51EF7 /* HeaderViewCell.m in Sources */,
+				B0D765DA1A0B182D0050D062 /* KLNewsMenuController.m in Sources */,
 				B03342C71A075AD700B10032 /* REMenuItem.m in Sources */,
 				B03342E51A075AD700B10032 /* RETextItem.m in Sources */,
 				B03342DB1A075AD700B10032 /* REDateTimeItem.m in Sources */,

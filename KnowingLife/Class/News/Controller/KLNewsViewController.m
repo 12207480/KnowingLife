@@ -32,6 +32,7 @@
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithIcon:@"navigationbar_more" target:self action:@selector(selectMoreNews)];
     
+    // 设置menuview
     [self setupMenuView];
     
     // 添加webview
@@ -41,7 +42,7 @@
     [self setupActivityIndicator];
     
     // 加载网页
-    [self loadWebViewUrl:fengNewUrl];
+    [self loadWebViewUrl:self.url];
     
 }
 
@@ -144,11 +145,12 @@
 // 后退
 - (void)Canccel
 {
-    if ([self.webView canGoBack]) {
-        [self.webView goBack];
-    } else {
-        self.navigationItem.leftBarButtonItem.enabled = NO;
-    }
+//    if ([self.webView canGoBack]) {
+//        [self.webView goBack];
+//    } else {
+//        self.navigationItem.leftBarButtonItem.enabled = NO;
+//    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 // 选择news
@@ -172,6 +174,19 @@
     [self.indicator stopAnimating];
     self.indicator.hidden = YES;
 
+}
+
+- (void)dealloc
+{
+    // 释放webview内存
+    [self.webView loadHTMLString:@"" baseURL:nil];
+    [self.webView stopLoading];
+    self.webView.delegate = nil;
+    [self.webView removeFromSuperview];
+    self.webView = nil;
+    
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    KLLog(@"KLNewsViewController dealloc");
 }
 
 /*

@@ -10,5 +10,5 @@
 
 @class KLDeal;
 @interface KLDetailDealController : UITableViewController
-@property (nonatomic, strong) KLDeal *deal;
+@property (nonatomic, copy) NSString *deal_id;
 @end

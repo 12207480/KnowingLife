@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface KLNewsViewController : UIViewController
-
+@property (nonatomic, copy) NSString *url;
 @end

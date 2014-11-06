@@ -15,6 +15,7 @@
 #import "ProductCollectionController.h"
 #import "CSStickyHeaderFlowLayout.h"
 #import "KLGroupBuyController.h"
+#import "KLNewsMenuController.h"
 
 @interface KLTableBarController ()<WBTabbarDekegate>
 @property (nonatomic, weak) WBTabBar *customTabBar;
@@ -87,7 +88,7 @@
     self.life = life;
     
     // 新闻控制器
-    KLNewsViewController *news = [[KLNewsViewController alloc]init];
+    KLNewsMenuController *news = [[KLNewsMenuController alloc]init];
     //msg.tabBarItem.badgeValue = @"30";
     [self addChildViewControl:news title:@"新闻" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
     

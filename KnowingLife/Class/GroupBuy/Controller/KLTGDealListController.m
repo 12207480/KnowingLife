@@ -361,7 +361,7 @@ static NSString *reuseIdDealCell = @"DealCell";
     KLDeal *deal = self.deals[indexPath.row];
     
     KLDetailDealController *detailDealCrl = [[KLDetailDealController alloc]init];
-    detailDealCrl.deal = deal;
+    detailDealCrl.deal_id = deal.deal_id;
     [self.navigationController pushViewController:detailDealCrl animated:YES];
 }
 

@@ -22,6 +22,7 @@
 @interface KLDetailDealController ()<RETableViewManagerDelegate,LXActivityDelegate>
 @property (nonatomic, strong) RETableViewManager *manager;
 @property (nonatomic, weak) KLBuyDock *buyDock;
+@property (nonatomic, strong) KLDeal *deal;
 @end
 
 // 标题字体大小
@@ -115,7 +116,7 @@
 - (void)getDetailData
 {
     __typeof (self) __weak weakSelf = self;
-    [[KLTGHttpTool sharedKLTGHttpTool] dealWithID:self.deal.deal_id success:^(KLDeal *deal){
+    [[KLTGHttpTool sharedKLTGHttpTool] dealWithID:self.deal_id success:^(KLDeal *deal){
         weakSelf.deal = deal;
         
         // 删除所有组
