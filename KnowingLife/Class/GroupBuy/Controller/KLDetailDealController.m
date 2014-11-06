@@ -18,6 +18,7 @@
 #import "KLDetailWebInfoController.h"
 #import "MBProgressHUD+MJ.h"
 #import "LXActivity.h"
+#import "KLLineLabel.h"
 
 @interface KLDetailDealController ()<RETableViewManagerDelegate,LXActivityDelegate>
 @property (nonatomic, strong) RETableViewManager *manager;
@@ -64,12 +65,6 @@
     
     self.manager.style.defaultCellSelectionStyle = UITableViewCellSelectionStyleNone;
     
-    // 添加dack
-    self.buyDock = [KLBuyDock buyDockWithNowPrice:self.deal.current_price_text originalPrice:self.deal.list_price_text clickedHander:^{
-        NSLog(@"点击了购买");
-    }];
-    [self.view addSubview:self.buyDock];
-    
     // 设置tableView边框
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
     self.tableView.contentInset = UIEdgeInsetsMake(0,0,self.buyDock.frame.size.height+8,0);
@@ -102,7 +97,7 @@
 #pragma mark 分享delegate
 - (void)didClickOnImageIndex:(NSInteger)imageIndex
 {
-    KLLog(@"%ld",imageIndex);
+    KLLog(@"%ld",(long)imageIndex);
 }
 
 
@@ -110,6 +105,28 @@
 - (void)collect
 {
     
+}
+
+#pragma mark 添加BuyDock
+- (void)addBuyDockView
+{
+    if (self.buyDock) {
+        [self.buyDock removeFromSuperview];
+    }
+    
+    __typeof (self) __weak weakSelf = self;
+    self.buyDock = [KLBuyDock buyDockWithNowPrice:self.deal.current_price_text originalPrice:self.deal.list_price_text clickedHander:^{
+        KLLog(@"点击了购买");
+        KLDetailWebInfoController *webInfo = [[KLDetailWebInfoController alloc]init];
+        webInfo.deal = weakSelf.deal;
+        [weakSelf.navigationController pushViewController:webInfo animated:YES];
+    }];
+    
+    // 设置frame
+    CGFloat toolbarY = self.view.frame.size.height - self.buyDock.frame.size.height;
+    
+    self.buyDock.frame = CGRectMake(self.buyDock.frame.origin.x, toolbarY +self.tableView.contentOffset.y , self.buyDock.frame.size.width, self.buyDock.frame.size.height);
+    [self.view addSubview:self.buyDock];
 }
 
 #pragma mark 获取数据
@@ -123,6 +140,11 @@
         [weakSelf.manager removeAllSections];
         // 添加每个组
         [weakSelf addSections];
+        
+        // 添加dack
+        [weakSelf addBuyDockView];
+        
+        [self.view addSubview:self.buyDock];
         
         [weakSelf.tableView reloadData];
         

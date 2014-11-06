@@ -36,7 +36,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"%@",webView.request.URL);
+    KLLog(@"%@",webView.request.URL);
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // 1.加载请求
@@ -44,6 +44,20 @@
         NSString *url = [NSString stringWithFormat:@"http://lite.m.dianping.com/group/deal/moreinfo/%@", ID];
         [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
         });
+}
+
+- (void)dealloc
+{
+    KLLog(@"KLDetailWebInfoController dealloc");
+    
+    // 释放webview内存
+    [self.webView loadHTMLString:@"" baseURL:nil];
+    [self.webView stopLoading];
+    self.webView.delegate = nil;
+    [self.webView removeFromSuperview];
+    self.webView = nil;
+    
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 @end

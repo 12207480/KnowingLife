@@ -148,6 +148,10 @@ singleton_implementation(KLMetaDataTool)
         // 当前城市
         _currentCity = visitedSection.cities.firstObject;
     }
+    if (_currentCity == nil) {
+        // 添加默认城市
+        _currentCity = _totalCities[@"深圳"];
+    }
     
     if (_visitedCityNames.count) {
         [tempSections insertObject:visitedSection atIndex:0];
