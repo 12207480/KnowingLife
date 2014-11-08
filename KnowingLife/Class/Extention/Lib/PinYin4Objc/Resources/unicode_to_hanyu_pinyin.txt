@@ -18302,7 +18302,7 @@
 957C (qu1)
 957D (liao2)
 957E (mi2)
-957F (zhang3,chang2)
+957F (chang2,zhang3)
 9580 (men2)
 9581 (ma4)
 9582 (shuan1)

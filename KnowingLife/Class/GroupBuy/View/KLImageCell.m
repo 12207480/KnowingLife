@@ -8,7 +8,6 @@
 
 #import "KLImageCell.h"
 #import "UIImageView+WebCache.h"
-#import "KLImageItem.h"
 
 @interface KLImageCell ()
 
@@ -29,6 +28,7 @@
 - (void)cellDidLoad
 {
     [super cellDidLoad];
+    
     self.pictureView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, kImageViewH)];
     self.pictureView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     [self addSubview:self.pictureView];

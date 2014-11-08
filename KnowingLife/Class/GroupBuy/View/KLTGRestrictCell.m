@@ -7,7 +7,6 @@
 //
 
 #import "KLTGRestrictCell.h"
-#import "KLRestrictItem.h"
 
 @interface KLTGRestrictCell ()
 // 是否支持过期退款

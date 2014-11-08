@@ -7,8 +7,8 @@
 //
 
 #import "RETableViewCell.h"
+#import "KLRestrictItem.h"
 
-@class KLRestrictItem;
 @interface KLTGRestrictCell : RETableViewCell
-@property (nonatomic, strong) KLRestrictItem *item;
+@property (strong, readwrite, nonatomic) KLRestrictItem *item;
 @end

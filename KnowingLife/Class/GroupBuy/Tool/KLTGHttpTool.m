@@ -36,7 +36,7 @@ singleton_implementation(KLTGHttpTool)
 }
 
 #pragma mark 获得大批量团购
-- (void)getDealsWithParams:(NSDictionary *)params success:(DealsSuccessBlock)success error:(DealsErrorBlock)error
+- (void)getDealsWithParams:(NSMutableDictionary *)params success:(DealsSuccessBlock)success error:(DealsErrorBlock)error
 {
     [self requestWithURL:@"v1/deal/find_deals" params:params block:^(id result, NSError *errorObj) {
         if (errorObj) { // 请求失败
@@ -88,30 +88,6 @@ singleton_implementation(KLTGHttpTool)
     if (orderIndext > 0) {
         [params setObject:@(orderIndext) forKey:@"sort"];
     }
-    
-//    // 1.2.添加区域参数
-//    NSString *district = [KLMetaDataTool sharedKLMetaDataTool].currentDistrict;
-//    if (district && ![district isEqualToString:@"全城"]) {
-//        [params setObject:district forKey:@"region"];
-//    }
-//    
-//    // 1.3.添加分类参数
-//    NSString *category = [KLMetaDataTool sharedKLMetaDataTool].currentSubcategorie;
-//    if (!category ||(category && [category isEqualToString:@"全部"])) {
-//        category = [KLMetaDataTool sharedKLMetaDataTool].currentCategory.category_name;
-//        [params setObject:category forKey:@"category"];
-//    } else if ([KLMetaDataTool sharedKLMetaDataTool].currentCategory.category_name) {
-//        [params setObject:category forKey:@"category"];
-//    }
-//    
-//    // 1.4.添加排序参数
-//    KLOrder *order = [KLMetaDataTool sharedKLMetaDataTool].currentOrder;
-//    if (order == nil) {
-//        [params setObject:@(1) forKey:@"sort"];
-//    } else {
-//        [params setObject:@(order.index) forKey:@"sort"];
-//    }
-
     
     // 添加页码参数
     [params setObject:@(page) forKey:@"page"];

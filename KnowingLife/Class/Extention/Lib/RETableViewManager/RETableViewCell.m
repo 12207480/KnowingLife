@@ -111,17 +111,20 @@
             self.selectionStyle = item.selectionStyle;
         self.imageView.image = item.image;
         self.imageView.highlightedImage = item.highlightedImage;
+        
+        // 自定义
+        if (self.item.titleFontSize > 0) {
+            self.textLabel.font = [UIFont systemFontOfSize:self.item.titleFontSize];
+        }
+        
+        if (self.item.titleColor) {
+            [self.textLabel setTextColor:self.item.titleColor];
+        }
+
     }
     if (self.textLabel.text.length == 0)
         self.textLabel.text = @" ";
     
-    if (self.item.titleFontSize > 0) {
-        self.textLabel.font = [UIFont systemFontOfSize:self.item.titleFontSize];
-    }
-    
-    if (self.item.titleColor) {
-        [self.textLabel setTextColor:self.item.titleColor];
-    }
 }
 
 - (void)cellDidDisappear

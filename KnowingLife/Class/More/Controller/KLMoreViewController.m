@@ -34,26 +34,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    //NSLog(@"%@",self.weatherInfo);
+    
     // 创建RETableViewManager管理类
     self.manager = [[RETableViewManager alloc]initWithTableView:self.tableView delegate:self];
     self.manager.style.cellHeight = 36;
+    
     // 选中不显示高亮
     //self.manager.style.defaultCellSelectionStyle = UITableViewCellSelectionStyleNone;
-    // 创建第一组
-    [self addSectionOne];
     
-    // 创建系统设置组
+    // 添加检查更新
+    [self addSectionUpdate];
+    
+    // 添加系统设置组
     [self addSectionSetting];
     
-    // 创建意见反馈
+    // 添加意见反馈
     [self addSectionSuggest];
     
-    // 创建关于
+    // 添加关于
     [self addSectionAbout];
 }
 
-- (void)addSectionOne
+#pragma mark 添加检查更新
+- (void)addSectionUpdate
 {
     // 创建一个组
     RETableViewSection *section = [RETableViewSection section];
@@ -85,6 +88,7 @@
     
 }
 
+#pragma mark 添加系统设置组
 - (void)addSectionSetting
 {
     // 创建一个组
@@ -135,7 +139,7 @@
     NSString *city = @"深圳";
     if (self.weatherInfo) {
         KLWeatherData *weatherData = self.weatherInfo.weather_data[0];
-        city = [NSString stringWithFormat:@"%@   %@   %@",self.weatherInfo.currentCity,weatherData.temperature, weatherData.weather];
+        city = [NSString stringWithFormat:@"%@    %@",self.weatherInfo.currentCity,weatherData.temperature];
     }
     __typeof (self) __weak weakSelf = self;
     RETableViewItem *weatherItem = [RETableViewItem itemWithTitle:city accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
@@ -154,6 +158,7 @@
     [section addItem:location];
 }
 
+#pragma mark 添加意见反馈
 - (void)addSectionSuggest
 {
     // 创建一个组
@@ -179,6 +184,7 @@
     [section addItem:suggestItem];
 }
 
+#pragma mark 添加关于
 - (void)addSectionAbout
 {
     // 创建一个组

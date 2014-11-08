@@ -9,6 +9,7 @@
 #import "KLNewsMenuController.h"
 #import "REMenu.h"
 #import "KLNewsViewController.h"
+#import "UIBarButtonItem+WB.h"
 
 @interface KLNewsMenuController ()
 @property (nonatomic, strong) REMenu *menu;
@@ -26,6 +27,14 @@
     // Do any additional setup after loading the view.
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    // 添加右导航按钮
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithIcon:@"navigationbar_more" target:self action:@selector(selectMoreNews)];
+    
+    // 设置背景
+    UIImageView *backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"audionews_play_bg_morning.jpg"]];
+    backgroundView.frame = self.view.bounds;
+    [self.view addSubview:backgroundView];
     
     // 设置menuview
     [self setupMenuView];
@@ -51,6 +60,15 @@
     }
 }
 
+// 显示菜单
+- (void)selectMoreNews
+{
+    if (![self.menu isOpen]) {
+        [self.menu showInView:self.view];
+    }
+}
+
+#pragma mark 设置menuview
 - (void)setupMenuView
 {
     // 消除block强引用
