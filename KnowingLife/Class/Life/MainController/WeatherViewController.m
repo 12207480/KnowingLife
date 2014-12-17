@@ -82,7 +82,12 @@
     self.dateLable.text = self.weatherInfo.date;
     self.weakLable.text = [weatherData.date substringToIndex:3];
     self.temperatureLable.text = weatherData.temperature;
-    self.wetherImageView.image = [UIImage imageWithName:weatherData.weather];
+    NSString *weather = weatherData.weather;
+    NSUInteger strLocation = [weather rangeOfString:@"转"].location;
+    if (strLocation != NSNotFound) {
+        weather = [weather substringToIndex:strLocation];
+    }
+    self.wetherImageView.image = [UIImage imageWithName:weather];
     self.windLable.text = weatherData.wind;
     self.weatherLable.text = weatherData.weather;
     self.detailLable.text = [NSString stringWithFormat:@"%@: %@",detail.tipt,detail.des];
@@ -91,7 +96,12 @@
         weatherData = self.weatherInfo.weather_data[i];
         SimpleWeatherView *simpleView = self.simapleweathers[i-1];
         simpleView.weekLable.text = weatherData.date;
-        simpleView.weatherImageView.image = [UIImage imageWithName:weatherData.weather];
+        NSString *weather = weatherData.weather;
+        NSUInteger strLocation = [weather rangeOfString:@"转"].location;
+        if (strLocation != NSNotFound) {
+            weather = [weather substringToIndex:strLocation];
+        }
+        simpleView.weatherImageView.image = [UIImage imageWithName:weather];
         simpleView.weatherLable.text = weatherData.weather;
         simpleView.windLable.text = weatherData.wind;
     }

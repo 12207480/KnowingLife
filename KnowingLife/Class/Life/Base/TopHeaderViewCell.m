@@ -25,7 +25,12 @@
     self.windLable.text = weatherData.wind;
     self.temperatureLable.text = weatherData.temperature;
     self.PM25.text = [NSString stringWithFormat:@"PM25: %@",weatherInfo.pm25];
-    self.weatherImageView.image = [UIImage imageWithName:weatherData.weather];
+    NSString *weather = weatherData.weather;
+    NSUInteger strLocation = [weather rangeOfString:@"转"].location;
+    if (strLocation != NSNotFound) {
+        weather = [weather substringToIndex:strLocation];
+    }
+    self.weatherImageView.image = [UIImage imageWithName:weather];
     self.weatherLable.text = weatherData.weather;
 }
 

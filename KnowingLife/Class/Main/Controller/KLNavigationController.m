@@ -41,7 +41,7 @@
         [navBar setBackgroundImage:[UIImage imageWithName:@"navigationbar_background"] forBarMetrics:UIBarMetricsDefault];
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackOpaque;
     }
-    
+
     // 设置标题属性
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[UITextAttributeTextColor] = [UIColor blackColor];
