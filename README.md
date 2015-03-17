@@ -1,7 +1,7 @@
 # KnowingLife
 基于天气，查询，团购，新闻类查询应用，自己自学ios，写的第一个ios项目，好久没用了，放着可惜，拿来给大家分享，希望给想写个项目，又无处着手的新人帮助，新手作品勿喷
 
-# KnowingLife 截图如下
+截图如下
  ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife1.png)
  ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife2.png)
  ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife3.png)
