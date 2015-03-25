@@ -5,14 +5,7 @@
 
 ### 截图如下<br />
 
- ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife1.png)
- ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife2.png)
- ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife3.png)
- ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife4.png)
- ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife5.png)
-      ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife6.png)
-       ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife7.png)
-        ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/knowingLife8.png)
+ ![image](https://raw.githubusercontent.com/12207480/KnowingLife/master/Screenshot/kowningLifedemo5.gif)
 
 
 本项目使用了一些开源类库，再次感谢，不在一一列举；
